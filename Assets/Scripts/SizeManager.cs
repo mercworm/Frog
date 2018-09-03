@@ -32,5 +32,7 @@ public class SizeManager : MonoBehaviour {
         flyCount++;
         rb2d.mass += massIncrease;
         EventManager.TriggerEvent("IncreaseJumpForce");
+
+        // if flycount is goal send win trigger
     }
 }

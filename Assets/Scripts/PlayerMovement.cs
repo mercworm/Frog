@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (!isGrounded)
+        if (isGrounded)
         {
             if (Input.GetKeyDown(jump))
             {
