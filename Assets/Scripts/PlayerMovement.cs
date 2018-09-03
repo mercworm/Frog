@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour {
     public float jumpForce;
     public float lickWait;
 
+    public float forceIncrease;
+
     Rigidbody2D rb2d;
 
     public bool isLicking;
@@ -70,6 +72,6 @@ public class PlayerMovement : MonoBehaviour {
 
     public void ForceIncrease ()
     {
-
+        jumpForce += forceIncrease;
     }
 }
