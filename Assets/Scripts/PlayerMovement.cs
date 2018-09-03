@@ -10,13 +10,28 @@ public class PlayerMovement : MonoBehaviour {
     public float jumpForce;
     public float lickWait;
 
-    public Rigidbody2D rb2d;
+    Rigidbody2D rb2d;
 
     public bool isLicking;
     public bool isGrounded;
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnEnable()
+    {
+        EventManager.StartListening("IncreaseJumpForce", ForceIncrease);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.StopListening("IncreaseJumpForce", ForceIncrease);
+    }
+
+    private void Start()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+    }
+
+    // Update is called once per frame
+    void Update () {
         if (!isGrounded)
         {
             if (Input.GetKeyDown(jump))
@@ -51,5 +66,10 @@ public class PlayerMovement : MonoBehaviour {
     private void OnCollisionExit2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Ground")) isGrounded = false;
+    }
+
+    public void ForceIncrease ()
+    {
+
     }
 }

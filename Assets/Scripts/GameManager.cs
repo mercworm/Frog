@@ -46,6 +46,12 @@ public class GameManager : MonoBehaviour {
         EventManager.StartListening("PlayerTwoWin", PlayerTwoWin);
     }
 
+    private void OnDisable()
+    {
+        EventManager.StopListening("PlayerOneWin", PlayerOneWin);
+        EventManager.StopListening("PlayerTwoWin", PlayerTwoWin);
+    }
+
     public void PlayerOneWin ()
     {
         playerOneScore++;
