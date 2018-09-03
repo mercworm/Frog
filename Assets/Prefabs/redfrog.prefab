@@ -414,6 +414,8 @@ MonoBehaviour:
   isGrounded: 0
   startPos: {x: 0, y: 0}
   centerOfMass: {x: 2.5, y: -3.7}
+  jumpAnimName: JumpRed
+  tongueAnimName: LickRed
 --- !u!212 &212021465420298298
 SpriteRenderer:
   m_ObjectHideFlags: 1
