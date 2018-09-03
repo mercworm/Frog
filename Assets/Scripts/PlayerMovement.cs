@@ -17,9 +17,12 @@ public class PlayerMovement : MonoBehaviour {
     public bool isLicking;
     public bool isGrounded;
 
+    public Vector2 startPos;
+
     private void OnEnable()
     {
         EventManager.StartListening("IncreaseJumpForce", ForceIncrease);
+        EventManager.StartListening("ResetLevel", Resetting);
     }
 
     private void OnDisable()
@@ -30,6 +33,7 @@ public class PlayerMovement : MonoBehaviour {
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        startPos = transform.position;
     }
 
     // Update is called once per frame
@@ -73,5 +77,10 @@ public class PlayerMovement : MonoBehaviour {
     public void ForceIncrease ()
     {
         jumpForce += forceIncrease;
+    }
+
+    public void Resetting()
+    {
+        transform.position = startPos;
     }
 }
