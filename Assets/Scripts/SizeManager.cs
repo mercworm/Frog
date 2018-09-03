@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class SizeManager : MonoBehaviour {
 
+    //The different sizes the frogs can be.
+    public Sprite[] playerSizes;
+    //The amount of flies they have eaten.
+    public int flyCount;
+
 	// Use this for initialization
 	void Start () {
 		

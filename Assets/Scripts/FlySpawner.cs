@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class FlySpawner : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    public float minTime;
+    public float maxTime;
+
+    public GameObject flyPrefab;
+
+	void Start ()
+    {
+        //Start with spawning a fly, so the loop can begin.
+        Invoke("SpawnFly", Random.Range(minTime, maxTime));
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public void SpawnFly ()
+    {
+        //spawn the fly here, at random location.
+        //Instantiate(flyPrefab, Vector2(Random.Range(min,max), Random.Range(min,max));
+        Invoke("SpawnFly", Random.Range(minTime, maxTime));
+    }
 }
