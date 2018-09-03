@@ -187,6 +187,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!255 &1054506653
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1054506649}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 2141391483}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0.221296, y: 0.4006775}
+  m_ConnectedAnchor: {x: -0.070980355, y: 0.33727452}
+  m_DampingRatio: 0
+  m_Frequency: 0
 --- !u!1 &1292979899
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +318,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4834308874164804, guid: 76781ff9443c8b242a8114c9aba5c523, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.22
+      value: -3.0995274
       objectReference: {fileID: 0}
     - target: {fileID: 4834308874164804, guid: 76781ff9443c8b242a8114c9aba5c523, type: 2}
       propertyPath: m_LocalPosition.z
@@ -509,7 +526,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4038739173959512, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.1804726
+      value: -3.06
       objectReference: {fileID: 0}
     - target: {fileID: 4038739173959512, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
       propertyPath: m_LocalPosition.z
@@ -534,6 +551,10 @@ Prefab:
     - target: {fileID: 4038739173959512, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241211463603244, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
