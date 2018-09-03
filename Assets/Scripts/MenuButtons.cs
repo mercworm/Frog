@@ -9,7 +9,7 @@ public class MenuButtons : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Z))
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Frog");
         }
@@ -20,11 +20,11 @@ public class MenuButtons : MonoBehaviour {
         }
 
         //Showing the credits when leftshift is held down
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if(Input.GetKeyDown(KeyCode.X))
         {
             creditsScreen.SetActive(true);
         }
-        if(Input.GetKeyUp(KeyCode.LeftShift))
+        if(Input.GetKeyUp(KeyCode.X))
         {
             creditsScreen.SetActive(false);
         }
