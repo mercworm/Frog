@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour {
     public bool isGrounded = true;
 
     public Vector2 startPos;
+    public Vector2 centerOfMass;
 
     private void OnEnable()
     {
@@ -34,6 +35,8 @@ public class PlayerMovement : MonoBehaviour {
     {
         rb2d = GetComponent<Rigidbody2D>();
         startPos = transform.position;
+
+        rb2d.centerOfMass = centerOfMass;
     }
 
     // Update is called once per frame
