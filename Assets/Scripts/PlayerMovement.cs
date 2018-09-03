@@ -14,8 +14,8 @@ public class PlayerMovement : MonoBehaviour {
 
     Rigidbody2D rb2d;
 
-    public bool isLicking;
-    public bool isGrounded;
+    public bool isLicking = false;
+    public bool isGrounded = true;
 
     public Vector2 startPos;
 
@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour {
             if (Input.GetKeyDown(jump))
             {
                 rb2d.AddForce(transform.up * jumpForce * Time.deltaTime);
+                Debug.Log("is jumping");
                 //trigger jump animation?
             }
         }
