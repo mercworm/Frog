@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             if (Input.GetKeyDown(jump))
             {
-                rb2d.AddForce(transform.up * jumpForce * Time.deltaTime);
+                rb2d.velocity = Vector2.up * jumpForce;
                 Debug.Log("is jumping");
                 //trigger jump animation?
             }

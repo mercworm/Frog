@@ -68,9 +68,12 @@ GameObject:
   - component: {fileID: 4834308874164804}
   - component: {fileID: 212168692212910118}
   - component: {fileID: 95218790666144270}
+  - component: {fileID: 50479326482099524}
+  - component: {fileID: 68956785065464976}
+  - component: {fileID: 114158282237263800}
   m_Layer: 0
   m_Name: redfrog
-  m_TagString: Untagged
+  m_TagString: PlayerTwo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220,6 +223,54 @@ Transform:
   m_Father: {fileID: 4834308874164804}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50479326482099524
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1396761408407580}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!68 &68956785065464976
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1396761408407580}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 1.0049505, y: -1.3841337}
+  - {x: 1.5388362, y: -1.4135487}
+  - {x: 2.6709974, y: -1.4422808}
+  - {x: 3.4199295, y: -1.3661228}
+  - {x: 4.372296, y: -0.9754296}
+  - {x: 4.704927, y: -0.33177137}
+  - {x: 4.63642, y: 0.44303566}
+  - {x: 4.4769397, y: 0.6327827}
+  - {x: 4.681463, y: 1.2707324}
+  - {x: 4.160453, y: 2.121601}
+  - {x: 3.0241978, y: 2.1543975}
+  - {x: 2.1471004, y: 2.3930461}
+  - {x: 1.1410284, y: 2.3374007}
 --- !u!95 &95218790666144270
 Animator:
   serializedVersion: 3
@@ -232,12 +283,31 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 08d47423277a5434bae2bba4c1d03eae, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114158282237263800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1396761408407580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ec92d22649cc04ea08830a583846db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jump: 110
+  tongue: 109
+  jumpForce: 10
+  lickWait: 0.4
+  forceIncrease: 2
+  isLicking: 0
+  isGrounded: 0
+  startPos: {x: 0, y: 0}
 --- !u!212 &212021465420298298
 SpriteRenderer:
   m_ObjectHideFlags: 1

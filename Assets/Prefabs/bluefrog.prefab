@@ -53,6 +53,10 @@ GameObject:
   - component: {fileID: 4038739173959512}
   - component: {fileID: 212132193710666366}
   - component: {fileID: 95017883573236860}
+  - component: {fileID: 50242826700960800}
+  - component: {fileID: 68877671276915266}
+  - component: {fileID: 232672995415366332}
+  - component: {fileID: 114747367810996106}
   m_Layer: 0
   m_Name: bluefrog
   m_TagString: Untagged
@@ -191,6 +195,53 @@ Transform:
   m_Father: {fileID: 4038739173959512}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50242826700960800
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259854827207102}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!68 &68877671276915266
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259854827207102}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.1955694, y: 2.273044}
+  - {x: -2.4630291, y: 2.3468087}
+  - {x: -3.082246, y: 2.1983657}
+  - {x: -3.3827536, y: 2.2792728}
+  - {x: -3.8188798, y: 2.381913}
+  - {x: -4.3635926, y: 2.3538551}
+  - {x: -4.902586, y: 1.433141}
+  - {x: -4.923502, y: -0.5198479}
+  - {x: -4.311424, y: -1.0947976}
+  - {x: -3.7113588, y: -1.348414}
+  - {x: -2.8498876, y: -1.4375868}
+  - {x: -0.834122, y: -1.2810799}
 --- !u!95 &95017883573236860
 Animator:
   serializedVersion: 3
@@ -209,6 +260,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114747367810996106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259854827207102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ec92d22649cc04ea08830a583846db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jump: 122
+  tongue: 120
+  jumpForce: 10
+  lickWait: 0.4
+  forceIncrease: 2
+  isLicking: 0
+  isGrounded: 1
+  startPos: {x: 0, y: 0}
 --- !u!212 &212080404381931568
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -485,3 +555,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!232 &232672995415366332
+DistanceJoint2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259854827207102}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 0.18645187
+  m_MaxDistanceOnly: 0
