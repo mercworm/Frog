@@ -7,6 +7,8 @@ public class FlySpawner : MonoBehaviour {
     public float minTime;
     public float maxTime;
 
+    public Vector2 areaPoint1, areaPoint2;
+
     public GameObject flyPrefab;
 
 	void Start ()

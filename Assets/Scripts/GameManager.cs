@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour {
 
     public float playerOneScore;
     public float playerTwoScore;
+    public int winScore;
 
     public GameObject pauseMenu;
     public GameObject winScreen;
@@ -76,10 +77,10 @@ public class GameManager : MonoBehaviour {
             }
         }
 
-        if (playerOneScore == 3)
+        if (playerOneScore == winScore)
         {
-            //Change which image to be activated depending on who won.
             winScreen.SetActive(true);
+            winScreen.transform.GetChild(0).gameObject.SetActive(true);
             winMenuActive = true;
         }
         else
@@ -105,9 +106,9 @@ public class GameManager : MonoBehaviour {
             }
         }
 
-        if (playerTwoScore == 3)
+        if (playerTwoScore == winScore)
         {
-            //Change which image to be activated depending on who won.
+            winScreen.transform.GetChild(1).gameObject.SetActive(true);
             winScreen.SetActive(true);
             winMenuActive = true;
         }
