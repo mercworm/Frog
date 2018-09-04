@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
 
     public KeyCode jump;
     public KeyCode tongue;
@@ -23,6 +24,8 @@ public class PlayerMovement : MonoBehaviour {
 
     public string jumpAnimName;
     public string tongueAnimName;
+
+    public PolygonCollider2D tongueCollider;
 
     //All the events this script listens to.
     private void OnEnable()
@@ -50,7 +53,8 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         //Only jump if the frog is touching the ground.
         if (isGrounded)
         {
@@ -70,10 +74,10 @@ public class PlayerMovement : MonoBehaviour {
                 StartCoroutine(LickPause());
             }
         }
-	}
+    }
 
     //Make sure the animation is finished before the next lick starts.
-    public IEnumerator LickPause ()
+    public IEnumerator LickPause()
     {
         frogAnim.SetTrigger(tongueAnimName);
         yield return new WaitForSeconds(lickWait);
@@ -83,16 +87,16 @@ public class PlayerMovement : MonoBehaviour {
     //Check when the frog touches the ground.
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground")) isGrounded = true;
+        if (collision.gameObject.CompareTag("Ground")) isGrounded = true;
     }
     //Check when the frog leaves the ground.
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground")) isGrounded = false;
+        if (collision.gameObject.CompareTag("Ground")) isGrounded = false;
     }
 
     //Increase the jump-force when the size and mass of the frog has increased.
-    public void ForceIncrease ()
+    public void ForceIncrease()
     {
         jumpForce += forceIncrease;
     }
@@ -101,5 +105,11 @@ public class PlayerMovement : MonoBehaviour {
     public void Resetting()
     {
         transform.position = startPos;
+    }
+
+    public void TongueColliderToggle()
+    {
+        if (tongueCollider.enabled) tongueCollider.enabled = false;
+        else tongueCollider.enabled = true;
     }
 }

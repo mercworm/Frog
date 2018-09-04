@@ -27,7 +27,7 @@ public class SizeManager : MonoBehaviour {
         {
             Debug.Log("Touched fly");
             //ChangeSize();
-            //Destroy(collision.gameObject); // this could be changed to do something else
+            Destroy(collision.gameObject); // this could be changed to do something else
         }
     }
 

@@ -7,20 +7,36 @@ public class FlySpawner : MonoBehaviour {
     public float minTime;
     public float maxTime;
 
-    public Vector2 areaPoint1, areaPoint2;
+    private float spawnPointX, spawnPointY;
 
-    public GameObject flyPrefab;
+    public GameObject flyPrefab1, flyPrefab2;
 
 	void Start ()
     {
         //Start with spawning a fly, so the loop can begin.
-        Invoke("SpawnFly", Random.Range(minTime, maxTime));
-	}
+        Invoke("SpawnFlyRight", Random.Range(minTime, maxTime));
+        Invoke("SpawnFlyLeft", Random.Range(minTime, maxTime));
+    }
 
-    public void SpawnFly ()
+    public void SpawnFlyRight ()
     {
-        //spawn the fly here, at random location.
-        //Instantiate(flyPrefab, Vector2(Random.Range(min,max), Random.Range(min,max));
-        Invoke("SpawnFly", Random.Range(minTime, maxTime));
+        spawnPointX = Random.Range(9,11);
+        spawnPointY = Random.Range(4,-2);
+        Vector3 spawn = new Vector3(spawnPointX, spawnPointY, 0);
+
+        Instantiate(flyPrefab1, spawn, Quaternion.identity);
+
+        Invoke("SpawnFlyRight", Random.Range(minTime, maxTime));
+    }
+
+    public void SpawnFlyLeft ()
+    {
+        spawnPointX = Random.Range(-9f, -11f);
+        spawnPointY = Random.Range(4f, -2f);
+        Vector3 spawn = new Vector3(spawnPointX, spawnPointY, 0);
+
+        Instantiate(flyPrefab2, spawn, Quaternion.identity);
+
+        Invoke("SpawnFlyLeft", Random.Range(minTime, maxTime));
     }
 }

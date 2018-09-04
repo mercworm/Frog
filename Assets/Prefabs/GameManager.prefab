@@ -76,7 +76,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minTime: 0
   maxTime: 0
-  flyPrefab: {fileID: 0}
+  areaPoint1: {x: 9, y: 4}
+  areaPoint2: {x: 0, y: 0}
+  flyPrefab: {fileID: 1164275587902446, guid: 2a0d078677177984198cbf8af8bdc97f, type: 2}
 --- !u!114 &114398289265071264
 MonoBehaviour:
   m_ObjectHideFlags: 1

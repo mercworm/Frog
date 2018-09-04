@@ -8,6 +8,7 @@ TagManager:
   - PlayerTwo
   - Ground
   - Fly
+  - FlyDie
   layers:
   - Default
   - TransparentFX
