@@ -1061,24 +1061,24 @@ Prefab:
     - target: {fileID: 114234924701387378, guid: 16684037fa6270046910750dfc7f802b,
         type: 2}
       propertyPath: minTime
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114234924701387378, guid: 16684037fa6270046910750dfc7f802b,
         type: 2}
       propertyPath: maxTime
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114234924701387378, guid: 16684037fa6270046910750dfc7f802b,
         type: 2}
       propertyPath: flyPrefab1
       value: 
-      objectReference: {fileID: 1164275587902446, guid: 2a0d078677177984198cbf8af8bdc97f,
+      objectReference: {fileID: 1363665975822722, guid: da0c616a64233e44295f21ebb9f576ea,
         type: 2}
     - target: {fileID: 114234924701387378, guid: 16684037fa6270046910750dfc7f802b,
         type: 2}
       propertyPath: flyPrefab2
       value: 
-      objectReference: {fileID: 1164275587902446, guid: 89663060ec332aa4197f28154456391f,
+      objectReference: {fileID: 1837780293422346, guid: d42917d4ce75fb54e906806de749a018,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16684037fa6270046910750dfc7f802b, type: 2}

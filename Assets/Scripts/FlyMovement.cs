@@ -17,8 +17,8 @@ public class FlyMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (left) rb2d.velocity = Vector3.right * moveSpeed;
-        else rb2d.velocity = Vector3.left * moveSpeed;
+        if (left) rb2d.velocity = Vector3.left * moveSpeed;
+        else rb2d.velocity = Vector3.right * moveSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
