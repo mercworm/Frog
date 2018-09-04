@@ -10,15 +10,28 @@ public class SizeManager : MonoBehaviour {
     public int flyCount = 0;
     public int currentSize = 0;
 
+    public GameObject crownHolder;
+    public Vector2 crownHolderStart;
+
     Rigidbody2D rb2d;
-    SpriteRenderer frogBody;
+    public SpriteRenderer frogBody;
 
     public float massIncrease;
 
-	// Use this for initialization
-	void Start () {
-        rb2d = GetComponent<Rigidbody2D>();
-        frogBody = GetComponentInParent<SpriteRenderer>();
+    private void OnEnable()
+    {
+        EventManager.StartListening("RoundComplete", Resetting);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.StopListening("RoundComplete", Resetting);
+    }
+
+    // Use this for initialization
+    void Start () {
+        rb2d = GetComponentInParent<Rigidbody2D>();
+        crownHolderStart = crownHolder.transform.position;
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,7 +39,16 @@ public class SizeManager : MonoBehaviour {
         if (collision.gameObject.CompareTag("Fly"))
         {
             Debug.Log("Touched fly");
-            //ChangeSize();
+            flyCount++;
+
+            if (flyCount >= 5)
+            {
+                EventManager.TriggerEvent(gameObject.tag + "Win");
+                Debug.Log("Triggered Win");
+                return;
+            }
+            else ChangeSize();
+
             Destroy(collision.gameObject); // this could be changed to do something else
         }
     }
@@ -37,13 +59,23 @@ public class SizeManager : MonoBehaviour {
         //this should be configured depending on the flycount, so we can change how many flies a frog needs to eat to grow.
         //this will hold for now though.
         currentSize++;
-        frogBody.sprite = playerSizes[currentSize];
 
-        flyCount++;
+        crownHolder.transform.position = new Vector2(crownHolder.transform.position.x, crownHolder.transform.position.y + 0.2f);
 
-        rb2d.mass += massIncrease;
-        EventManager.TriggerEvent("IncreaseJumpForce");
+        if (playerSizes[currentSize] != null)
+        {
+            frogBody.sprite = playerSizes[currentSize];
+            rb2d.mass += massIncrease;
+            EventManager.TriggerEvent("IncreaseJumpForce");
+        }
+    }
 
-        // if flycount is goal send win trigger
+    public void Resetting ()
+    {
+        flyCount = 0;
+        currentSize = 0;
+        rb2d.mass = 1;
+        frogBody.sprite = playerSizes[0];
+        //crownHolder.transform.position = crownHolderStart;
     }
 }

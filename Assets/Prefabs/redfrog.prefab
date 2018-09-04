@@ -74,7 +74,6 @@ GameObject:
   - component: {fileID: 50479326482099524}
   - component: {fileID: 114158282237263800}
   - component: {fileID: 60366533003872102}
-  - component: {fileID: 233432291044714158}
   m_Layer: 0
   m_Name: redfrog
   m_TagString: PlayerTwo
@@ -160,7 +159,7 @@ GameObject:
   - component: {fileID: 114701945063527188}
   m_Layer: 0
   m_Name: redfrog_tongue
-  m_TagString: Untagged
+  m_TagString: PlayerTwo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -316,7 +315,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1253490972758952}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.63, y: 0.82, z: 0}
+  m_LocalPosition: {x: 0.63, y: 0.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4834308874164804}
@@ -348,7 +347,7 @@ PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1683605114310308}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -564,17 +563,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ec92d22649cc04ea08830a583846db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jump: 110
-  tongue: 109
+  jump: 273
+  tongue: 275
   jumpForce: 10
   lickWait: 0.4
-  forceIncrease: 2
+  forceIncrease: 1
   isLicking: 0
   isGrounded: 0
   startPos: {x: 0, y: 0}
   centerOfMass: {x: 2.5, y: -3.7}
   jumpAnimName: JumpRed
   tongueAnimName: LickRed
+  tongueCollider: {fileID: 60040764444167480}
 --- !u!114 &114701945063527188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -586,10 +586,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c341c40bc14abb644bfb595d61143db3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSizes: []
+  playerSizes:
+  - {fileID: 21300000, guid: ce33205bc34b4ae49acf0c49d87a8749, type: 3}
+  - {fileID: 21300000, guid: 2b0f95fc7adf536438906068930c1485, type: 3}
+  - {fileID: 21300000, guid: 67e5b3736d8a6c642af18763ab39e131, type: 3}
+  - {fileID: 21300000, guid: 029dc98442187c44eadffca1937b37f2, type: 3}
+  - {fileID: 21300000, guid: 1e9ed69c6276b6546b581231866c257b, type: 3}
   flyCount: 0
   currentSize: 0
-  massIncrease: 0
+  crownHolder: {fileID: 1416681750055418}
+  frogBody: {fileID: 212168692212910118}
+  massIncrease: 0.3
 --- !u!198 &198490850061653930
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -14972,26 +14979,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!233 &233432291044714158
-HingeJoint2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1396761408407580}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0.21656431, y: 0.41954815}
-  m_ConnectedAnchor: {x: -0.07571212, y: 0.35614517}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 1
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 45

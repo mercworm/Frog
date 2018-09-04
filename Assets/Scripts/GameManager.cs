@@ -66,14 +66,13 @@ public class GameManager : MonoBehaviour {
     {
         playerOneScore++;
 
-        //this should enable the first crown that isn't active. but hey who knows
         for (int i = 0; i < crownHolderBlue.transform.childCount; i++)
         {
             var child = crownHolderBlue.transform.GetChild(i).gameObject;
             if (!child.activeInHierarchy)
             {
                 child.SetActive(true);
-                return;
+                break;
             }
         }
 
@@ -82,10 +81,12 @@ public class GameManager : MonoBehaviour {
             winScreen.SetActive(true);
             winScreen.transform.GetChild(0).gameObject.SetActive(true);
             winMenuActive = true;
+            return;
         }
         else
         {
             EventManager.TriggerEvent("RoundComplete");
+            Debug.Log("RoundComplete!");
         }
     }
 
@@ -95,14 +96,13 @@ public class GameManager : MonoBehaviour {
     {
         playerTwoScore++;
 
-        //this should enable the first crown that isn't active. but hey who knows
         for (int i = 0; i < crownHolderRed.transform.childCount; i++)
         {
             var child = crownHolderRed.transform.GetChild(i).gameObject;
             if (!child.activeInHierarchy)
             {
                 child.SetActive(true);
-                return;
+                break;
             }
         }
 
@@ -117,5 +117,4 @@ public class GameManager : MonoBehaviour {
             EventManager.TriggerEvent("RoundComplete");
         }
     }
-
 }

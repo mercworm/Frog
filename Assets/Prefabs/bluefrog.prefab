@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 114802698033501010}
   m_Layer: 0
   m_Name: bluefrog_tongue
-  m_TagString: Untagged
+  m_TagString: PlayerOne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,7 +300,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1020380465272400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.80245554, y: 0.86, z: 0}
+  m_LocalPosition: {x: -0.80245554, y: 0.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4038739173959512}
@@ -348,7 +348,7 @@ PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1529505475776784}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -565,17 +565,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ec92d22649cc04ea08830a583846db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jump: 122
-  tongue: 120
+  jump: 119
+  tongue: 97
   jumpForce: 10
   lickWait: 0.4
-  forceIncrease: 2
+  forceIncrease: 1
   isLicking: 0
   isGrounded: 1
   startPos: {x: 0, y: 0}
   centerOfMass: {x: -2.5, y: -3.7}
   jumpAnimName: JumpBlue
   tongueAnimName: LickBlue
+  tongueCollider: {fileID: 60636757952877494}
 --- !u!114 &114802698033501010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -587,10 +588,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c341c40bc14abb644bfb595d61143db3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSizes: []
+  playerSizes:
+  - {fileID: 21300000, guid: a4fd0d33b49481c479635a15f30f0933, type: 3}
+  - {fileID: 21300000, guid: 41688b882d61abb43ab516bd3a7a5e45, type: 3}
+  - {fileID: 21300000, guid: 265cd6a93cea8234fb4cc8089d7a3178, type: 3}
+  - {fileID: 21300000, guid: fbac83b6f3f31804e90b8e90fb51b336, type: 3}
+  - {fileID: 21300000, guid: 5bdc0a0e4428ef84f9c3057d4f290913, type: 3}
   flyCount: 0
   currentSize: 0
-  massIncrease: 0
+  crownHolder: {fileID: 1514632683076404}
+  frogBody: {fileID: 212132193710666366}
+  massIncrease: 0.3
 --- !u!198 &198010920727916088
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -14987,7 +14995,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.13978978, y: 0.3751736}
-  m_ConnectedAnchor: {x: 0.055064753, y: -2.946578}
+  m_ConnectedAnchor: {x: 0.15248665, y: 0.4385769}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
