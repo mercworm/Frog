@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1478470340302966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.228467, y: 3.1038592, z: 0}
+  m_LocalPosition: {x: -0.64, y: 9.45, z: 0}
   m_LocalScale: {x: 0.60521, y: 0.60521, z: 0.60521}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4688,7 +4688,7 @@ ParticleSystemRenderer:
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_RenderAlignment: 0
-  m_Pivot: {x: 0, y: 0, z: 0}
+  m_Pivot: {x: 0, y: 0.5, z: 0}
   m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
