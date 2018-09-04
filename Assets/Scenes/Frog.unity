@@ -665,6 +665,10 @@ Prefab:
       propertyPath: tongueCollider
       value: 
       objectReference: {fileID: 2060128458}
+    - target: {fileID: 4923465021027246, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
   m_IsPrefabAsset: 0
@@ -726,6 +730,10 @@ Prefab:
       propertyPath: tongueCollider
       value: 
       objectReference: {fileID: 1378467127}
+    - target: {fileID: 4950868351031840, guid: 76781ff9443c8b242a8114c9aba5c523, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76781ff9443c8b242a8114c9aba5c523, type: 2}
   m_IsPrefabAsset: 0
