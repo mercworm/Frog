@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour {
     public bool winMenuActive;
     public bool pauseMenuActive;
 
+    public GameObject crownHolderRed;
+    public GameObject crownHolderBlue;
+
     private void Update()
     {
         //if a player presses esc, bring up pause menu.
@@ -61,6 +64,18 @@ public class GameManager : MonoBehaviour {
     public void PlayerOneWin ()
     {
         playerOneScore++;
+
+        //this should enable the first crown that isn't active. but hey who knows
+        for (int i = 0; i < crownHolderBlue.transform.childCount; i++)
+        {
+            var child = crownHolderBlue.transform.GetChild(i).gameObject;
+            if (!child.activeInHierarchy)
+            {
+                child.SetActive(true);
+                return;
+            }
+        }
+
         if (playerOneScore == 3)
         {
             //Change which image to be activated depending on who won.
@@ -78,6 +93,18 @@ public class GameManager : MonoBehaviour {
     public void PlayerTwoWin ()
     {
         playerTwoScore++;
+
+        //this should enable the first crown that isn't active. but hey who knows
+        for (int i = 0; i < crownHolderRed.transform.childCount; i++)
+        {
+            var child = crownHolderRed.transform.GetChild(i).gameObject;
+            if (!child.activeInHierarchy)
+            {
+                child.SetActive(true);
+                return;
+            }
+        }
+
         if (playerTwoScore == 3)
         {
             //Change which image to be activated depending on who won.
