@@ -106,6 +106,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4291126860563464}
   - component: {fileID: 212424042583837352}
+  - component: {fileID: 60636757952877494}
+  - component: {fileID: 114802698033501010}
   m_Layer: 0
   m_Name: bluefrog_tongue
   m_TagString: Untagged
@@ -340,6 +342,67 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &60636757952877494
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529505475776784}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 21, y: 15}
+    newSize: {x: 21, y: 15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -8.961914, y: -0.82543945}
+      - {x: -8.151855, y: -0.7434082}
+      - {x: -7.8237305, y: -0.7126465}
+      - {x: -6.552246, y: -0.5793457}
+      - {x: -6.32666, y: -0.5588379}
+      - {x: -5.48584, y: -0.49731445}
+      - {x: -5.137207, y: -0.47680664}
+      - {x: -4.82959, y: -0.45629883}
+      - {x: -4.7680664, y: -0.35375977}
+      - {x: -4.7680664, y: -0.31274414}
+      - {x: -4.788574, y: -0.29223633}
+      - {x: -4.82959, y: -0.29223633}
+      - {x: -4.8398438, y: -0.30249023}
+      - {x: -6.2753906, y: -0.30249023}
+      - {x: -6.7368164, y: -0.31274414}
+      - {x: -7.0751953, y: -0.32299805}
+      - {x: -7.5981445, y: -0.34350586}
+      - {x: -8.428711, y: -0.37426758}
+      - {x: -8.777344, y: -0.3947754}
+      - {x: -8.961914, y: -0.4152832}
+      - {x: -9.064453, y: -0.43579102}
+      - {x: -9.146484, y: -0.34350586}
+      - {x: -9.269531, y: -0.28198242}
+      - {x: -9.464355, y: -0.28198242}
+      - {x: -9.648926, y: -0.32299805}
+      - {x: -9.802734, y: -0.45629883}
+      - {x: -9.854004, y: -0.5690918}
+      - {x: -9.854004, y: -0.763916}
+      - {x: -9.812988, y: -0.8562012}
+      - {x: -9.710449, y: -0.95874023}
+      - {x: -9.60791, y: -1.0202637}
+      - {x: -9.505371, y: -1.0510254}
+      - {x: -9.413086, y: -1.0715332}
+      - {x: -9.197754, y: -1.0715332}
+      - {x: -9.105469, y: -1.0202637}
+      - {x: -9.0234375, y: -0.9279785}
+      - {x: -9.0234375, y: -0.84594727}
 --- !u!60 &60741816155949594
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -513,6 +576,21 @@ MonoBehaviour:
   centerOfMass: {x: -2.5, y: -3.7}
   jumpAnimName: JumpBlue
   tongueAnimName: LickBlue
+--- !u!114 &114802698033501010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529505475776784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c341c40bc14abb644bfb595d61143db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSizes: []
+  flyCount: 0
+  currentSize: 0
+  massIncrease: 0
 --- !u!198 &198010920727916088
 ParticleSystem:
   m_ObjectHideFlags: 1

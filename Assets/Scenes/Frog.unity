@@ -586,6 +586,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 233476618778402614, guid: b5168121ea335a442b8a3178f396c9ec,
+        type: 2}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 1486585643}
+    - target: {fileID: 233476618778402614, guid: b5168121ea335a442b8a3178f396c9ec,
+        type: 2}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.15248665
+      objectReference: {fileID: 0}
+    - target: {fileID: 233476618778402614, guid: b5168121ea335a442b8a3178f396c9ec,
+        type: 2}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.4385769
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
   m_IsPrefabAsset: 0
@@ -832,6 +847,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1408749266}
   m_CullTransparentMesh: 0
+--- !u!50 &1486585643 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 50479326482099524, guid: 76781ff9443c8b242a8114c9aba5c523,
+    type: 2}
+  m_PrefabInternal: {fileID: 790250332}
 --- !u!1001 &1685718267
 Prefab:
   m_ObjectHideFlags: 0

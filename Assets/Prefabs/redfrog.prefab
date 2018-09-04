@@ -72,7 +72,6 @@ GameObject:
   - component: {fileID: 212168692212910118}
   - component: {fileID: 95218790666144270}
   - component: {fileID: 50479326482099524}
-  - component: {fileID: 68956785065464976}
   - component: {fileID: 114158282237263800}
   - component: {fileID: 60366533003872102}
   - component: {fileID: 233432291044714158}
@@ -157,6 +156,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4360863130027032}
   - component: {fileID: 212130756914882586}
+  - component: {fileID: 60040764444167480}
+  - component: {fileID: 114701945063527188}
   m_Layer: 0
   m_Name: redfrog_tongue
   m_TagString: Untagged
@@ -341,6 +342,67 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &60040764444167480
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683605114310308}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 21, y: 15}
+    newSize: {x: 21, y: 15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 9.618164, y: -0.80493164}
+      - {x: 9.638672, y: -0.7229004}
+      - {x: 9.638672, y: -0.67163086}
+      - {x: 9.618164, y: -0.5383301}
+      - {x: 9.556641, y: -0.44604492}
+      - {x: 9.495117, y: -0.37426758}
+      - {x: 9.290039, y: -0.29223633}
+      - {x: 9.064453, y: -0.29223633}
+      - {x: 8.961914, y: -0.32299805}
+      - {x: 8.808105, y: -0.43579102}
+      - {x: 8.664551, y: -0.4152832}
+      - {x: 8.397949, y: -0.3947754}
+      - {x: 8.213379, y: -0.38452148}
+      - {x: 7.659668, y: -0.36401367}
+      - {x: 6.8598633, y: -0.33325195}
+      - {x: 6.5214844, y: -0.32299805}
+      - {x: 6.0600586, y: -0.31274414}
+      - {x: 4.614258, y: -0.31274414}
+      - {x: 4.604004, y: -0.30249023}
+      - {x: 4.573242, y: -0.30249023}
+      - {x: 4.5527344, y: -0.31274414}
+      - {x: 4.5527344, y: -0.35375977}
+      - {x: 4.59375, y: -0.47680664}
+      - {x: 4.7783203, y: -0.48706055}
+      - {x: 5.0961914, y: -0.49731445}
+      - {x: 5.8549805, y: -0.548584}
+      - {x: 6.336914, y: -0.5895996}
+      - {x: 7.5058594, y: -0.7126465}
+      - {x: 8.356934, y: -0.79467773}
+      - {x: 8.736328, y: -0.84594727}
+      - {x: 8.828613, y: -0.95874023}
+      - {x: 8.900391, y: -1.0407715}
+      - {x: 8.982422, y: -1.0817871}
+      - {x: 9.177246, y: -1.0817871}
+      - {x: 9.331055, y: -1.0612793}
+      - {x: 9.433594, y: -1.0202637}
+      - {x: 9.587402, y: -0.8869629}
 --- !u!60 &60366533003872102
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -473,34 +535,6 @@ PolygonCollider2D:
       - {x: 3.8862305, y: 0.7741699}
       - {x: 3.8452148, y: 0.7741699}
       - {x: 3.619629, y: 0.763916}
---- !u!68 &68956785065464976
-EdgeCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1396761408407580}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 1.0049505, y: -1.3841337}
-  - {x: 1.5388362, y: -1.4135487}
-  - {x: 2.6709974, y: -1.4422808}
-  - {x: 3.4199295, y: -1.3661228}
-  - {x: 4.372296, y: -0.9754296}
-  - {x: 4.704927, y: -0.33177137}
-  - {x: 4.63642, y: 0.44303566}
-  - {x: 4.4769397, y: 0.6327827}
-  - {x: 4.681463, y: 1.2707324}
-  - {x: 4.160453, y: 2.121601}
-  - {x: 3.0241978, y: 2.1543975}
-  - {x: 2.1471004, y: 2.3930461}
-  - {x: 1.1410284, y: 2.3374007}
 --- !u!95 &95218790666144270
 Animator:
   serializedVersion: 3
@@ -541,6 +575,21 @@ MonoBehaviour:
   centerOfMass: {x: 2.5, y: -3.7}
   jumpAnimName: JumpRed
   tongueAnimName: LickRed
+--- !u!114 &114701945063527188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683605114310308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c341c40bc14abb644bfb595d61143db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSizes: []
+  flyCount: 0
+  currentSize: 0
+  massIncrease: 0
 --- !u!198 &198490850061653930
 ParticleSystem:
   m_ObjectHideFlags: 1
