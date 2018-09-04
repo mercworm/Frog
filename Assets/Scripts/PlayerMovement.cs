@@ -12,13 +12,17 @@ public class PlayerMovement : MonoBehaviour {
 
     public float forceIncrease;
 
-    Rigidbody2D rb2d;
+    private Rigidbody2D rb2d;
+    private Animator frogAnim;
 
     public bool isLicking = false;
     public bool isGrounded = true;
 
     public Vector2 startPos;
     public Vector2 centerOfMass;
+
+    public string jumpAnimName;
+    public string tongueAnimName;
 
     private void OnEnable()
     {
@@ -34,8 +38,9 @@ public class PlayerMovement : MonoBehaviour {
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        startPos = transform.position;
+        frogAnim = GetComponent<Animator>();
 
+        startPos = transform.position;
         rb2d.centerOfMass = centerOfMass;
     }
 
@@ -47,7 +52,7 @@ public class PlayerMovement : MonoBehaviour {
             {
                 rb2d.velocity = Vector2.up * jumpForce;
                 Debug.Log("is jumping");
-                //trigger jump animation?
+                frogAnim.SetTrigger(jumpAnimName);
             }
         }
 
@@ -63,7 +68,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public IEnumerator LickPause ()
     {
-        // trigger the tongue animation, so it shoots out.
+        frogAnim.SetTrigger(tongueAnimName);
         yield return new WaitForSeconds(lickWait);
         isLicking = false;
     }
