@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour {
 
     private void Update()
     {
+        //if a player presses esc, bring up pause menu.
+        //If a player presses it twice, go bak to main menu.
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (pauseMenuActive) UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
@@ -25,6 +27,7 @@ public class GameManager : MonoBehaviour {
             }
         }
 
+        //if a menu is active, restart the scene completely, or close the menu. 
         if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.N) || Input.GetKeyDown(KeyCode.M))
         {
             if (winMenuActive)
@@ -40,6 +43,7 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    //Check who won a round.
     private void OnEnable()
     {
         EventManager.StartListening("PlayerOneWin", PlayerOneWin);
@@ -52,6 +56,8 @@ public class GameManager : MonoBehaviour {
         EventManager.StopListening("PlayerTwoWin", PlayerTwoWin);
     }
 
+    //If player one won a round, add points or declare winner.
+    //Otherwise reset game for next round.
     public void PlayerOneWin ()
     {
         playerOneScore++;
@@ -67,6 +73,8 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    //If player two won a round, add points or declare winner.
+    //Otherwise reset game for next round.
     public void PlayerTwoWin ()
     {
         playerTwoScore++;
