@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode tongue;
 
     public float jumpForce;
+    public float jumpForceStart;
     public float lickWait;
 
     public float forceIncrease;
@@ -25,19 +26,21 @@ public class PlayerMovement : MonoBehaviour
     public string jumpAnimName;
     public string tongueAnimName;
 
+    public bool canMove = false;
+
     public PolygonCollider2D tongueCollider;
 
     //All the events this script listens to.
     private void OnEnable()
     {
         EventManager.StartListening("IncreaseJumpForce", ForceIncrease);
-        EventManager.StartListening("ResetLevel", Resetting);
+        EventManager.StartListening("RoundComplete", Resetting);
     }
 
     private void OnDisable()
     {
         EventManager.StopListening("IncreaseJumpForce", ForceIncrease);
-        EventManager.StopListening("IncreaseJumpForce", ForceIncrease);
+        EventManager.StopListening("RoundComplete", Resetting);
     }
 
     //Get animator and rigidbody.
@@ -50,28 +53,33 @@ public class PlayerMovement : MonoBehaviour
         startPos = transform.position;
         //Center of mass, to change the feel of the frogs.
         rb2d.centerOfMass = centerOfMass;
+
+        jumpForceStart = jumpForce;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Only jump if the frog is touching the ground.
-        if (isGrounded)
+        if (canMove)
         {
-            if (Input.GetKeyDown(jump))
+            //Only jump if the frog is touching the ground.
+            if (isGrounded)
             {
-                frogAnim.SetTrigger(jumpAnimName);
-                rb2d.velocity = Vector2.up * jumpForce;
-                Debug.Log("is jumping");
+                if (Input.GetKeyDown(jump))
+                {
+                    frogAnim.SetTrigger(jumpAnimName);
+                    rb2d.velocity = Vector2.up * jumpForce;
+                    Debug.Log("is jumping");
+                }
             }
-        }
-        //Don't start a lick, if a lick is already in progress.
-        if (!isLicking)
-        {
-            if (Input.GetKeyDown(tongue))
+            //Don't start a lick, if a lick is already in progress.
+            if (!isLicking)
             {
-                isLicking = true;
-                StartCoroutine(LickPause());
+                if (Input.GetKeyDown(tongue))
+                {
+                    isLicking = true;
+                    StartCoroutine(LickPause());
+                }
             }
         }
     }
@@ -105,11 +113,18 @@ public class PlayerMovement : MonoBehaviour
     public void Resetting()
     {
         transform.position = startPos;
+        jumpForce = jumpForceStart;
     }
 
     public void TongueColliderToggle()
     {
         if (tongueCollider.enabled) tongueCollider.enabled = false;
         else tongueCollider.enabled = true;
+    }
+
+    public void MovementToggle ()
+    {
+        if (canMove) canMove = false;
+        else canMove = true;
     }
 }

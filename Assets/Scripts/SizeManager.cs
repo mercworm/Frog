@@ -11,15 +11,27 @@ public class SizeManager : MonoBehaviour {
     public int currentSize = 0;
 
     public GameObject crownHolder;
+    public Vector2 crownHolderStart;
 
     Rigidbody2D rb2d;
     public SpriteRenderer frogBody;
 
     public float massIncrease;
 
-	// Use this for initialization
-	void Start () {
+    private void OnEnable()
+    {
+        EventManager.StartListening("RoundComplete", Resetting);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.StopListening("RoundComplete", Resetting);
+    }
+
+    // Use this for initialization
+    void Start () {
         rb2d = GetComponentInParent<Rigidbody2D>();
+        crownHolderStart = crownHolder.transform.position;
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -56,5 +68,14 @@ public class SizeManager : MonoBehaviour {
             rb2d.mass += massIncrease;
             EventManager.TriggerEvent("IncreaseJumpForce");
         }
+    }
+
+    public void Resetting ()
+    {
+        flyCount = 0;
+        currentSize = 0;
+        rb2d.mass = 1;
+        frogBody.sprite = playerSizes[0];
+        //crownHolder.transform.position = crownHolderStart;
     }
 }

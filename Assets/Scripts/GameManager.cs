@@ -81,6 +81,7 @@ public class GameManager : MonoBehaviour {
             winScreen.SetActive(true);
             winScreen.transform.GetChild(0).gameObject.SetActive(true);
             winMenuActive = true;
+            return;
         }
         else
         {
@@ -116,5 +117,4 @@ public class GameManager : MonoBehaviour {
             EventManager.TriggerEvent("RoundComplete");
         }
     }
-
 }
