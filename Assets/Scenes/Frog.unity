@@ -456,6 +456,7 @@ GameObject:
   - component: {fileID: 459303912}
   - component: {fileID: 459303911}
   - component: {fileID: 459303910}
+  - component: {fileID: 459303913}
   m_Layer: 0
   m_Name: wow!
   m_TagString: Untagged
@@ -540,6 +541,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &459303913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 459303909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063d7add5622b4a458b442d71fb2b5aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wowSprite: {fileID: 0}
+  isSprite: 1
+  waitTime: 0
 --- !u!1 &472110350
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +802,34 @@ Prefab:
       propertyPath: lickWait
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 1742286966263304, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996357852100250, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535697393105634, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4631415614301190, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4631415614301190, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531107897145668, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531107897145668, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
   m_IsPrefabAsset: 0
@@ -856,6 +899,18 @@ Prefab:
         type: 2}
       propertyPath: lickWait
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598633104148330, guid: 76781ff9443c8b242a8114c9aba5c523, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1706145741767814, guid: 76781ff9443c8b242a8114c9aba5c523, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135877112823820, guid: 76781ff9443c8b242a8114c9aba5c523, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76781ff9443c8b242a8114c9aba5c523, type: 2}
@@ -1611,6 +1666,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1837780293422346, guid: d42917d4ce75fb54e906806de749a018,
         type: 2}
+    - target: {fileID: 114772245539288804, guid: 16684037fa6270046910750dfc7f802b,
+        type: 2}
+      propertyPath: wowSprite
+      value: 
+      objectReference: {fileID: 459303909}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16684037fa6270046910750dfc7f802b, type: 2}
   m_IsPrefabAsset: 0
