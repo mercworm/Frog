@@ -35,12 +35,14 @@ public class PlayerMovement : MonoBehaviour
     {
         EventManager.StartListening("IncreaseJumpForce", ForceIncrease);
         EventManager.StartListening("RoundComplete", Resetting);
+        EventManager.StartListening("PlayersMovementToggle", MovementToggle);
     }
 
     private void OnDisable()
     {
         EventManager.StopListening("IncreaseJumpForce", ForceIncrease);
         EventManager.StopListening("RoundComplete", Resetting);
+        EventManager.StopListening("PlayersMovementToggle", MovementToggle);
     }
 
     //Get animator and rigidbody.
@@ -53,8 +55,6 @@ public class PlayerMovement : MonoBehaviour
         startPos = transform.position;
         //Center of mass, to change the feel of the frogs.
         rb2d.centerOfMass = centerOfMass;
-
-        jumpForceStart = jumpForce;
     }
 
     // Update is called once per frame

@@ -189,7 +189,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1598633104148330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.02, y: 2.93, z: 0}
+  m_LocalPosition: {x: -0.04, y: 1.72, z: 0}
   m_LocalScale: {x: 0.54537, y: 0.54537, z: 0.54537}
   m_Children: []
   m_Father: {fileID: 4699795724686142}
@@ -228,7 +228,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1135877112823820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.03, y: 4.21, z: 0}
+  m_LocalPosition: {x: 0, y: 0.81, z: 0}
   m_LocalScale: {x: 0.5795342, y: 0.5795342, z: 0.5795342}
   m_Children: []
   m_Father: {fileID: 4699795724686142}
@@ -254,7 +254,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1706145741767814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.06, y: 5.09, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.60521, y: 0.60521, z: 0.60521}
   m_Children: []
   m_Father: {fileID: 4699795724686142}
@@ -266,8 +266,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1416681750055418}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 6.03, y: 0, z: -0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 3, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4529982127436016}
@@ -566,6 +566,7 @@ MonoBehaviour:
   jump: 273
   tongue: 275
   jumpForce: 10
+  jumpForceStart: 0
   lickWait: 0.4
   forceIncrease: 1
   isLicking: 0
@@ -574,6 +575,7 @@ MonoBehaviour:
   centerOfMass: {x: 2.5, y: -3.7}
   jumpAnimName: JumpRed
   tongueAnimName: LickRed
+  canMove: 0
   tongueCollider: {fileID: 60040764444167480}
 --- !u!114 &114701945063527188
 MonoBehaviour:
@@ -595,6 +597,7 @@ MonoBehaviour:
   flyCount: 0
   currentSize: 0
   crownHolder: {fileID: 1416681750055418}
+  crownHolderStart: {x: 6, y: 0}
   frogBody: {fileID: 212168692212910118}
   massIncrease: 0.3
 --- !u!198 &198490850061653930
