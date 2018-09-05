@@ -10,6 +10,9 @@ public class SizeManager : MonoBehaviour {
     public int flyCount = 0;
     public int currentSize = 0;
 
+    public AudioClip[] growthSounds;
+    public AudioSource growthSource;
+
     public GameObject crownHolder;
     private Vector2 crownHolderStart;
 
@@ -65,6 +68,9 @@ public class SizeManager : MonoBehaviour {
 
         if (playerSizes[currentSize] != null)
         {
+            growthSource.clip = growthSounds[currentSize];
+            growthSource.Play();
+
             frogBody.sprite = playerSizes[currentSize];
             rb2d.mass += massIncrease;
             EventManager.TriggerEvent("IncreaseJumpForce");
