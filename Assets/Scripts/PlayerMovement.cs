@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioClip jumpSound, lickSound;
 
-    public PolygonCollider2D tongueCollider;
+    public CircleCollider2D tongueCollider;
 
     //All the events this script listens to.
     private void OnEnable()
