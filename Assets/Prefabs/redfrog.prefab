@@ -11,6 +11,22 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1396761408407580}
   m_IsPrefabAsset: 1
+--- !u!1 &1058839883757734
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4500263687334950}
+  - component: {fileID: 212354205290369820}
+  m_Layer: 0
+  m_Name: SplatFly
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1135877112823820
 GameObject:
   m_ObjectHideFlags: 1
@@ -155,8 +171,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4360863130027032}
   - component: {fileID: 212130756914882586}
-  - component: {fileID: 60040764444167480}
   - component: {fileID: 114701945063527188}
+  - component: {fileID: 82686258876163912}
+  - component: {fileID: 58255536698836696}
   m_Layer: 0
   m_Name: redfrog_tongue
   m_TagString: PlayerTwo
@@ -217,7 +234,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.07, y: 0.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4500263687334950}
   m_Father: {fileID: 4834308874164804}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -245,6 +263,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4834308874164804}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4500263687334950
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1058839883757734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.23, y: -0.6, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4360863130027032}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4529982127436016
@@ -341,8 +372,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60040764444167480
-PolygonCollider2D:
+--- !u!58 &58255536698836696
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -353,55 +384,9 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 21, y: 15}
-    newSize: {x: 21, y: 15}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 9.618164, y: -0.80493164}
-      - {x: 9.638672, y: -0.7229004}
-      - {x: 9.638672, y: -0.67163086}
-      - {x: 9.618164, y: -0.5383301}
-      - {x: 9.556641, y: -0.44604492}
-      - {x: 9.495117, y: -0.37426758}
-      - {x: 9.290039, y: -0.29223633}
-      - {x: 9.064453, y: -0.29223633}
-      - {x: 8.961914, y: -0.32299805}
-      - {x: 8.808105, y: -0.43579102}
-      - {x: 8.664551, y: -0.4152832}
-      - {x: 8.397949, y: -0.3947754}
-      - {x: 8.213379, y: -0.38452148}
-      - {x: 7.659668, y: -0.36401367}
-      - {x: 6.8598633, y: -0.33325195}
-      - {x: 6.5214844, y: -0.32299805}
-      - {x: 6.0600586, y: -0.31274414}
-      - {x: 4.614258, y: -0.31274414}
-      - {x: 4.604004, y: -0.30249023}
-      - {x: 4.573242, y: -0.30249023}
-      - {x: 4.5527344, y: -0.31274414}
-      - {x: 4.5527344, y: -0.35375977}
-      - {x: 4.59375, y: -0.47680664}
-      - {x: 4.7783203, y: -0.48706055}
-      - {x: 5.0961914, y: -0.49731445}
-      - {x: 5.8549805, y: -0.548584}
-      - {x: 6.336914, y: -0.5895996}
-      - {x: 7.5058594, y: -0.7126465}
-      - {x: 8.356934, y: -0.79467773}
-      - {x: 8.736328, y: -0.84594727}
-      - {x: 8.828613, y: -0.95874023}
-      - {x: 8.900391, y: -1.0407715}
-      - {x: 8.982422, y: -1.0817871}
-      - {x: 9.177246, y: -1.0817871}
-      - {x: 9.331055, y: -1.0612793}
-      - {x: 9.433594, y: -1.0202637}
-      - {x: 9.587402, y: -0.8869629}
+  m_Offset: {x: 9.223155, y: -0.676811}
+  serializedVersion: 2
+  m_Radius: 0.43761146
 --- !u!60 &60366533003872102
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -534,6 +519,101 @@ PolygonCollider2D:
       - {x: 3.8862305, y: 0.7741699}
       - {x: 3.8452148, y: 0.7741699}
       - {x: 3.619629, y: 0.763916}
+--- !u!82 &82686258876163912
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683605114310308}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &95218790666144270
 Animator:
   serializedVersion: 3
@@ -576,7 +656,9 @@ MonoBehaviour:
   jumpAnimName: JumpRed
   tongueAnimName: LickRed
   canMove: 0
-  tongueCollider: {fileID: 60040764444167480}
+  jumpSound: {fileID: 0}
+  lickSound: {fileID: 0}
+  tongueCollider: {fileID: 58255536698836696}
 --- !u!114 &114701945063527188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -596,9 +678,17 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1e9ed69c6276b6546b581231866c257b, type: 3}
   flyCount: 0
   currentSize: 0
+  growthSounds:
+  - {fileID: 0}
+  - {fileID: 8300000, guid: b5653b0061077dd45a67bcae13b4b3ca, type: 3}
+  - {fileID: 8300000, guid: 640e53cc7410de249a7a240b0df8704d, type: 3}
+  - {fileID: 8300000, guid: a21ba118b4fe9d34a9e7173943f4d57d, type: 3}
+  - {fileID: 8300000, guid: 3d9dc9b87f44907488f479dec22cbe67, type: 3}
+  growthSource: {fileID: 82686258876163912}
   crownHolder: {fileID: 1416681750055418}
   frogBody: {fileID: 212168692212910118}
   massIncrease: 0.3
+  splatFly: {fileID: 1058839883757734}
 --- !u!198 &198490850061653930
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -14601,7 +14691,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 9ab8dd48910003c45a2c468c7a93bb5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14693,7 +14783,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ce33205bc34b4ae49acf0c49d87a8749, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14797,6 +14887,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!212 &212354205290369820
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1058839883757734}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: f0a3a86b07392704280e60affd99fdba, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.94, y: 3.51}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!212 &212378374520321942
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -14831,7 +14967,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 12655cbe06d5e0a42b3efbd340515b50, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14969,7 +15105,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 35b77f3ce83ba604c8a7f20c1b519b0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

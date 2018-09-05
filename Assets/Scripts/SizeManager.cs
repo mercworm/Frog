@@ -21,6 +21,8 @@ public class SizeManager : MonoBehaviour {
 
     public float massIncrease;
 
+    public GameObject splatFly;
+
     private void OnEnable()
     {
         EventManager.StartListening("RoundComplete", Resetting);
@@ -42,6 +44,7 @@ public class SizeManager : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Fly"))
         {
+            splatFly.SetActive(true);
             Debug.Log("Touched fly");
             flyCount++;
 
