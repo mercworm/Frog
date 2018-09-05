@@ -566,8 +566,8 @@ MonoBehaviour:
   jump: 273
   tongue: 275
   jumpForce: 10
-  jumpForceStart: 0
-  lickWait: 0.4
+  jumpForceStart: 10
+  lickWait: 0.3
   forceIncrease: 1
   isLicking: 0
   isGrounded: 0
@@ -597,7 +597,6 @@ MonoBehaviour:
   flyCount: 0
   currentSize: 0
   crownHolder: {fileID: 1416681750055418}
-  crownHolderStart: {x: 6, y: 0}
   frogBody: {fileID: 212168692212910118}
   massIncrease: 0.3
 --- !u!198 &198490850061653930

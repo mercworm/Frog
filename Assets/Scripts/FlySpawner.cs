@@ -11,7 +11,14 @@ public class FlySpawner : MonoBehaviour {
 
     public GameObject flyPrefab1, flyPrefab2;
 
-	void Start ()
+    public bool spawning = true;
+
+    private void OnEnable()
+    {
+        EventManager.StartListening("Win", StopSpawning);
+    }
+
+    void Start ()
     {
         //Start with spawning a fly, so the loop can begin.
         Invoke("SpawnFlyRight", Random.Range(minTime, maxTime));
@@ -20,23 +27,34 @@ public class FlySpawner : MonoBehaviour {
 
     public void SpawnFlyRight ()
     {
-        spawnPointX = Random.Range(9,11);
-        spawnPointY = Random.Range(4,-2);
-        Vector3 spawn = new Vector3(spawnPointX, spawnPointY, 0);
+        if (spawning)
+        {
+            spawnPointX = Random.Range(9, 11);
+            spawnPointY = Random.Range(4, -2);
+            Vector3 spawn = new Vector3(spawnPointX, spawnPointY, 0);
 
-        Instantiate(flyPrefab1, spawn, Quaternion.identity);
+            Instantiate(flyPrefab1, spawn, Quaternion.identity);
 
-        Invoke("SpawnFlyRight", Random.Range(minTime, maxTime));
+            Invoke("SpawnFlyRight", Random.Range(minTime, maxTime));
+        }
     }
 
     public void SpawnFlyLeft ()
     {
-        spawnPointX = Random.Range(-9f, -11f);
-        spawnPointY = Random.Range(4f, -2f);
-        Vector3 spawn = new Vector3(spawnPointX, spawnPointY, 0);
+        if (spawning)
+        {
+            spawnPointX = Random.Range(-9f, -11f);
+            spawnPointY = Random.Range(4f, -2f);
+            Vector3 spawn = new Vector3(spawnPointX, spawnPointY, 0);
 
-        Instantiate(flyPrefab2, spawn, Quaternion.identity);
+            Instantiate(flyPrefab2, spawn, Quaternion.identity);
 
-        Invoke("SpawnFlyLeft", Random.Range(minTime, maxTime));
+            Invoke("SpawnFlyLeft", Random.Range(minTime, maxTime));
+        }
+    }
+
+    public void StopSpawning ()
+    {
+        spawning = false;
     }
 }
