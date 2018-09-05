@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 212424042583837352}
   - component: {fileID: 60636757952877494}
   - component: {fileID: 114802698033501010}
+  - component: {fileID: 82018522891805358}
   m_Layer: 0
   m_Name: bluefrog_tongue
   m_TagString: PlayerOne
@@ -537,6 +538,101 @@ PolygonCollider2D:
       - {x: -3.619629, y: 0.8664551}
       - {x: -3.6811523, y: 0.82543945}
       - {x: -3.9990234, y: 0.763916}
+--- !u!82 &82018522891805358
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529505475776784}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!82 &82817695920186042
 AudioSource:
   m_ObjectHideFlags: 1
@@ -694,6 +790,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5bdc0a0e4428ef84f9c3057d4f290913, type: 3}
   flyCount: 0
   currentSize: 0
+  growthSounds:
+  - {fileID: 0}
+  - {fileID: 8300000, guid: b5653b0061077dd45a67bcae13b4b3ca, type: 3}
+  - {fileID: 8300000, guid: 640e53cc7410de249a7a240b0df8704d, type: 3}
+  - {fileID: 8300000, guid: a21ba118b4fe9d34a9e7173943f4d57d, type: 3}
+  - {fileID: 8300000, guid: 3d9dc9b87f44907488f479dec22cbe67, type: 3}
+  growthSource: {fileID: 82018522891805358}
   crownHolder: {fileID: 1514632683076404}
   frogBody: {fileID: 212132193710666366}
   massIncrease: 0.3
