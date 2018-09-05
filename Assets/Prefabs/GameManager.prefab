@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114234924701387378}
   - component: {fileID: 114880254462942844}
   - component: {fileID: 114209081032260828}
+  - component: {fileID: 114772245539288804}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -74,11 +75,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5528acd6eb3fbc541903c5a99aa155b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTime: 0
-  maxTime: 0
-  areaPoint1: {x: 9, y: 4}
-  areaPoint2: {x: 0, y: 0}
-  flyPrefab: {fileID: 1164275587902446, guid: 2a0d078677177984198cbf8af8bdc97f, type: 2}
+  minTime: 2
+  maxTime: 5
+  flyPrefab1: {fileID: 1363665975822722, guid: da0c616a64233e44295f21ebb9f576ea, type: 2}
+  flyPrefab2: {fileID: 1837780293422346, guid: d42917d4ce75fb54e906806de749a018, type: 2}
 --- !u!114 &114398289265071264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,6 +90,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16ec2e823ea3ad4c80d0edbae806451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114772245539288804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1651369069499242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063d7add5622b4a458b442d71fb2b5aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wowSprite: {fileID: 0}
 --- !u!114 &114880254462942844
 MonoBehaviour:
   m_ObjectHideFlags: 1

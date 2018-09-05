@@ -11,7 +11,7 @@ public class SizeManager : MonoBehaviour {
     public int currentSize = 0;
 
     public GameObject crownHolder;
-    public Vector2 crownHolderStart;
+    private Vector2 crownHolderStart;
 
     Rigidbody2D rb2d;
     public SpriteRenderer frogBody;
@@ -31,7 +31,8 @@ public class SizeManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb2d = GetComponentInParent<Rigidbody2D>();
-        crownHolderStart = crownHolder.transform.position;
+
+        crownHolderStart = crownHolder.transform.localPosition;
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -76,6 +77,6 @@ public class SizeManager : MonoBehaviour {
         currentSize = 0;
         rb2d.mass = 1;
         frogBody.sprite = playerSizes[0];
-        //crownHolder.transform.position = crownHolderStart;
+        crownHolder.transform.localPosition = crownHolderStart;
     }
 }

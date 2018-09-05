@@ -312,7 +312,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1514632683076404}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.11, y: 2.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -568,6 +568,7 @@ MonoBehaviour:
   jump: 119
   tongue: 97
   jumpForce: 10
+  jumpForceStart: 10
   lickWait: 0.4
   forceIncrease: 1
   isLicking: 0
@@ -576,6 +577,7 @@ MonoBehaviour:
   centerOfMass: {x: -2.5, y: -3.7}
   jumpAnimName: JumpBlue
   tongueAnimName: LickBlue
+  canMove: 0
   tongueCollider: {fileID: 60636757952877494}
 --- !u!114 &114802698033501010
 MonoBehaviour:
@@ -597,6 +599,7 @@ MonoBehaviour:
   flyCount: 0
   currentSize: 0
   crownHolder: {fileID: 1514632683076404}
+  crownHolderStart: {x: -1.7, y: -1.9}
   frogBody: {fileID: 212132193710666366}
   massIncrease: 0.3
 --- !u!198 &198010920727916088
