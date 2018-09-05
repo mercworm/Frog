@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public KeyCode jump;
     public KeyCode tongue;
 
@@ -27,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     public string tongueAnimName;
 
     public bool canMove = false;
+
+    public AudioClip jumpSound, lickSound;
 
     public PolygonCollider2D tongueCollider;
 
@@ -70,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
                     frogAnim.SetTrigger(jumpAnimName);
                     rb2d.velocity = Vector2.up * jumpForce;
                     Debug.Log("is jumping");
+                    //AudioSource.PlayClipAtPoint(jumpSound, transform.position);
                 }
             }
             //Don't start a lick, if a lick is already in progress.
@@ -90,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
         frogAnim.SetTrigger(tongueAnimName);
         yield return new WaitForSeconds(lickWait);
         isLicking = false;
+        //AudioSource.PlayClipAtPoint(lickSound, transform.position);
     }
 
     //Check when the frog touches the ground.
