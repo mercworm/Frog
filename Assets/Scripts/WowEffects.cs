@@ -11,7 +11,9 @@ public class WowEffects : MonoBehaviour {
 
     private void OnEnable()
     {
+        if (isSprite) return;
         EventManager.StartListening("RoundComplete", TriggerWow);
+        EventManager.StartListening("Win", Win);
     }
 
     private void OnDisable()
@@ -26,7 +28,6 @@ public class WowEffects : MonoBehaviour {
 
     public void TriggerWow()
     {
-        if (isSprite) return;
         wowSprite.SetActive(true);
     }
 
@@ -39,5 +40,11 @@ public class WowEffects : MonoBehaviour {
     {
         yield return new WaitForSeconds(waitTime);
         EventManager.TriggerEvent("PlayersMovementToggleOn");
+    }
+
+    public void Win ()
+    {
+        //whatever we might want to show with the winscreen, if we're not already doing that
+        EventManager.TriggerEvent("PlayersMovementToggleOff");
     }
 }
