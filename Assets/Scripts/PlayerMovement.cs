@@ -35,14 +35,14 @@ public class PlayerMovement : MonoBehaviour
     {
         EventManager.StartListening("IncreaseJumpForce", ForceIncrease);
         EventManager.StartListening("RoundComplete", Resetting);
-        EventManager.StartListening("PlayersMovementToggle", MovementToggle);
+        EventManager.StartListening("PlayersMovementToggleOn", MovementToggleOn);
     }
 
     private void OnDisable()
     {
         EventManager.StopListening("IncreaseJumpForce", ForceIncrease);
         EventManager.StopListening("RoundComplete", Resetting);
-        EventManager.StopListening("PlayersMovementToggle", MovementToggle);
+        EventManager.StopListening("PlayersMovementToggleOn", MovementToggleOn);
     }
 
     //Get animator and rigidbody.
@@ -122,9 +122,13 @@ public class PlayerMovement : MonoBehaviour
         else tongueCollider.enabled = true;
     }
 
-    public void MovementToggle ()
+    public void MovementToggleOn ()
     {
-        if (canMove) canMove = false;
-        else canMove = true;
+        canMove = true;
+    }
+
+    public void MovementToggleOff ()
+    {
+        canMove = false;
     }
 }

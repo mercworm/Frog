@@ -38,6 +38,6 @@ public class WowEffects : MonoBehaviour {
     public IEnumerator BeforeMovementActive()
     {
         yield return new WaitForSeconds(waitTime);
-        EventManager.TriggerEvent("PlayersMovementToggle");
+        EventManager.TriggerEvent("PlayersMovementToggleOn");
     }
 }
