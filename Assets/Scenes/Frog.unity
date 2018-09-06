@@ -1799,17 +1799,17 @@ Prefab:
       objectReference: {fileID: 949906128}
     - target: {fileID: 114209081032260828, guid: 16684037fa6270046910750dfc7f802b,
         type: 2}
-      propertyPath: exit
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 114209081032260828, guid: 16684037fa6270046910750dfc7f802b,
-        type: 2}
-      propertyPath: keepPlaying
-      value: 32
-      objectReference: {fileID: 0}
+      propertyPath: flySource
+      value: 
+      objectReference: {fileID: 1685718268}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16684037fa6270046910750dfc7f802b, type: 2}
   m_IsPrefabAsset: 0
+--- !u!82 &1685718268 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 82140561524161182, guid: 16684037fa6270046910750dfc7f802b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1685718267}
 --- !u!1 &1940849247
 GameObject:
   m_ObjectHideFlags: 0
