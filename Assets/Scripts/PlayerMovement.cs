@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool canMove = false;
 
-    public AudioClip jumpSound, lickSound;
+    public AudioClip jumpSound, lickSound, landSound;
 
     public Collider2D[] tongueCollider;
 
@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
                     frogAnim.SetTrigger(jumpAnimName);
                     rb2d.velocity = Vector2.up * jumpForce;
                     Debug.Log("is jumping");
-                    //AudioSource.PlayClipAtPoint(jumpSound, transform.position);
+                    AudioSource.PlayClipAtPoint(jumpSound, transform.position);
                 }
             }
             //Don't start a lick, if a lick is already in progress.
@@ -103,7 +103,11 @@ public class PlayerMovement : MonoBehaviour
     //Check when the frog touches the ground.
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground")) isGrounded = true;
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+            AudioSource.PlayClipAtPoint(jumpSound, transform.position);
+        }
     }
     //Check when the frog leaves the ground.
     private void OnCollisionExit2D(Collision2D collision)

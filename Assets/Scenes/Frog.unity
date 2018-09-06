@@ -944,6 +944,26 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114747367810996106, guid: b5168121ea335a442b8a3178f396c9ec,
+        type: 2}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: da170cbc3b2019a44b3a8f1ea2a4acf1, type: 3}
+    - target: {fileID: 114747367810996106, guid: b5168121ea335a442b8a3178f396c9ec,
+        type: 2}
+      propertyPath: lickSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114747367810996106, guid: b5168121ea335a442b8a3178f396c9ec,
+        type: 2}
+      propertyPath: landSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 08bfe24a5c525d5448fc1cb2b37c217c, type: 3}
+    - target: {fileID: 82817695920186042, guid: b5168121ea335a442b8a3178f396c9ec,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
   m_IsPrefabAsset: 0
@@ -1021,6 +1041,16 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114158282237263800, guid: 76781ff9443c8b242a8114c9aba5c523,
+        type: 2}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: da170cbc3b2019a44b3a8f1ea2a4acf1, type: 3}
+    - target: {fileID: 114158282237263800, guid: 76781ff9443c8b242a8114c9aba5c523,
+        type: 2}
+      propertyPath: landSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 08bfe24a5c525d5448fc1cb2b37c217c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76781ff9443c8b242a8114c9aba5c523, type: 2}
   m_IsPrefabAsset: 0
@@ -1514,7 +1544,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1292979899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0.01, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.73182046, y: 0.6901193, z: 0.65529066}
   m_Children:
   - {fileID: 2094492245}
@@ -1535,7 +1565,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -6.6602907}
+  m_Offset: {x: 0, y: -6.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
