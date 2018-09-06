@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 58255536698836696}
   - component: {fileID: 50115881645740018}
   - component: {fileID: 82915667524726842}
+  - component: {fileID: 60510100690817146}
   m_Layer: 0
   m_Name: redfrog_tongue
   m_TagString: PlayerTwo
@@ -541,6 +542,55 @@ PolygonCollider2D:
       - {x: 3.8862305, y: 0.7741699}
       - {x: 3.8452148, y: 0.7741699}
       - {x: 3.619629, y: 0.763916}
+--- !u!60 &60510100690817146
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683605114310308}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 21, y: 15}
+    newSize: {x: 21, y: 15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 9.618164, y: -0.80493164}
+      - {x: 9.638672, y: -0.7229004}
+      - {x: 9.638672, y: -0.67163086}
+      - {x: 9.618164, y: -0.5383301}
+      - {x: 9.556641, y: -0.44604492}
+      - {x: 9.495117, y: -0.37426758}
+      - {x: 9.290039, y: -0.29223633}
+      - {x: 9.064453, y: -0.29223633}
+      - {x: 8.961914, y: -0.32299805}
+      - {x: 8.808105, y: -0.43579102}
+      - {x: 8.664551, y: -0.4152832}
+      - {x: 8.397949, y: -0.3947754}
+      - {x: 8.213379, y: -0.38452148}
+      - {x: 7.659668, y: -0.36401367}
+      - {x: 6.8598633, y: -0.33325195}
+      - {x: 7.5058594, y: -0.7126465}
+      - {x: 8.356934, y: -0.79467773}
+      - {x: 8.736328, y: -0.84594727}
+      - {x: 8.828613, y: -0.95874023}
+      - {x: 8.900391, y: -1.0407715}
+      - {x: 8.982422, y: -1.0817871}
+      - {x: 9.177246, y: -1.0817871}
+      - {x: 9.331055, y: -1.0612793}
+      - {x: 9.433594, y: -1.0202637}
+      - {x: 9.587402, y: -0.8869629}
 --- !u!82 &82686258876163912
 AudioSource:
   m_ObjectHideFlags: 1
@@ -775,7 +825,9 @@ MonoBehaviour:
   canMove: 0
   jumpSound: {fileID: 0}
   lickSound: {fileID: 0}
-  tongueCollider: {fileID: 58255536698836696}
+  tongueCollider:
+  - {fileID: 58255536698836696}
+  - {fileID: 60510100690817146}
 --- !u!114 &114701945063527188
 MonoBehaviour:
   m_ObjectHideFlags: 1
