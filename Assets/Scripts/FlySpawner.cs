@@ -9,7 +9,8 @@ public class FlySpawner : MonoBehaviour {
 
     private float spawnPointX, spawnPointY;
 
-    public GameObject flyPrefab1, flyPrefab2;
+    public GameObject[] leftFlies;
+    public GameObject[] rightFlies;
 
     public bool spawning = true;
 
@@ -33,7 +34,7 @@ public class FlySpawner : MonoBehaviour {
             spawnPointY = Random.Range(4, -2);
             Vector3 spawn = new Vector3(spawnPointX, spawnPointY, 0);
 
-            Instantiate(flyPrefab1, spawn, Quaternion.identity);
+            Instantiate(rightFlies[Random.Range(0,2)], spawn, Quaternion.identity);
 
             Invoke("SpawnFlyRight", Random.Range(minTime, maxTime));
         }
@@ -47,7 +48,7 @@ public class FlySpawner : MonoBehaviour {
             spawnPointY = Random.Range(4f, -2f);
             Vector3 spawn = new Vector3(spawnPointX, spawnPointY, 0);
 
-            Instantiate(flyPrefab2, spawn, Quaternion.identity);
+            Instantiate(leftFlies[Random.Range(0,2)], spawn, Quaternion.identity);
 
             Invoke("SpawnFlyLeft", Random.Range(minTime, maxTime));
         }
