@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         EventManager.StartListening("RoundComplete", Resetting);
         EventManager.StartListening("PlayersMovementToggleOn", MovementToggleOn);
         EventManager.StartListening("PlayersMovementToggleOff", MovementToggleOff);
+        EventManager.StartListening("StartRound", MovementToggleOn);
     }
 
     private void OnDisable()

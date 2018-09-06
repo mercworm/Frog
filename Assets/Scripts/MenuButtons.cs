@@ -6,25 +6,27 @@ public class MenuButtons : MonoBehaviour {
 
     public GameObject creditsScreen;
 
+    public KeyCode startGame, endGame, credits;
+
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown(KeyCode.Z))
+		if (Input.GetKeyDown(startGame))
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Frog");
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(endGame))
         {
             Application.Quit();
         }
 
         //Showing the credits when leftshift is held down
-        if(Input.GetKeyDown(KeyCode.X))
+        if(Input.GetKeyDown(credits))
         {
             creditsScreen.SetActive(true);
         }
-        if(Input.GetKeyUp(KeyCode.X))
+        if(Input.GetKeyUp(credits))
         {
             creditsScreen.SetActive(false);
         }

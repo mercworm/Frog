@@ -12,24 +12,19 @@ public class WowEffects : MonoBehaviour {
     private void OnEnable()
     {
         if (isSprite) return;
-        EventManager.StartListening("RoundComplete", TriggerWow);
+        EventManager.StartListening("RoundComplete", RoundComplete);
         EventManager.StartListening("Win", Win);
     }
 
     private void OnDisable()
     {
-        EventManager.StopListening("RoundComplete", TriggerWow);
+        EventManager.StopListening("RoundComplete", RoundComplete);
     }
 
     // Use this for initialization
     void Start () {
         StartCoroutine(BeforeMovementActive());
 	}
-
-    public void TriggerWow()
-    {
-        wowSprite.SetActive(true);
-    }
 
     public void TurnOffObject ()
     {
@@ -47,5 +42,17 @@ public class WowEffects : MonoBehaviour {
         Debug.Log("Someone won!!");
         //whatever we might want to show with the winscreen, if we're not already doing that
         EventManager.TriggerEvent("PlayersMovementToggleOff");
+    }
+
+    public void RoundComplete()
+    {
+        StartCoroutine(RoundCompleteActions());
+    }
+
+    public IEnumerator RoundCompleteActions ()
+    {
+        //here goes all the things that we want to show between rounds.
+        wowSprite.SetActive(true);
+        yield return new WaitForEndOfFrame();
     }
 }

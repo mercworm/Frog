@@ -9,13 +9,16 @@ public class FlySpawner : MonoBehaviour {
 
     private float spawnPointX, spawnPointY;
 
-    public GameObject flyPrefab1, flyPrefab2;
+    public GameObject[] leftFlies;
+    public GameObject[] rightFlies;
 
     public bool spawning = true;
 
     private void OnEnable()
     {
         EventManager.StartListening("Win", StopSpawning);
+        EventManager.StartListening("RoundComplete", StopSpawning);
+        EventManager.StartListening("StartRound", StartSpawning);
     }
 
     void Start ()
@@ -33,10 +36,10 @@ public class FlySpawner : MonoBehaviour {
             spawnPointY = Random.Range(4, -2);
             Vector3 spawn = new Vector3(spawnPointX, spawnPointY, 0);
 
-            Instantiate(flyPrefab1, spawn, Quaternion.identity);
-
-            Invoke("SpawnFlyRight", Random.Range(minTime, maxTime));
+            Instantiate(rightFlies[Random.Range(0,2)], spawn, Quaternion.identity);
         }
+
+        Invoke("SpawnFlyRight", Random.Range(minTime, maxTime));
     }
 
     public void SpawnFlyLeft ()
@@ -47,14 +50,19 @@ public class FlySpawner : MonoBehaviour {
             spawnPointY = Random.Range(4f, -2f);
             Vector3 spawn = new Vector3(spawnPointX, spawnPointY, 0);
 
-            Instantiate(flyPrefab2, spawn, Quaternion.identity);
-
-            Invoke("SpawnFlyLeft", Random.Range(minTime, maxTime));
+            Instantiate(leftFlies[Random.Range(0,2)], spawn, Quaternion.identity);
         }
+
+        Invoke("SpawnFlyLeft", Random.Range(minTime, maxTime));
     }
 
     public void StopSpawning ()
     {
         spawning = false;
+    }
+
+    public void StartSpawning ()
+    {
+        spawning = true;
     }
 }
