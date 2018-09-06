@@ -813,7 +813,6 @@ MonoBehaviour:
   jump: 273
   tongue: 275
   jumpForce: 10
-  jumpForceStart: 10
   lickWait: 0.3
   forceIncrease: 1
   isLicking: 0

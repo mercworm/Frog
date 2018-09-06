@@ -44,9 +44,17 @@ public class SizeManager : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Fly"))
         {
-            splatFly.SetActive(true);
+            var fly = collision.gameObject.GetComponent<FlyMovement>();
+            if (fly.IsEaten)
+                return;
+
+            fly.IsEaten = true;
+
+            splatFly.SetActive(true); // this doesn't work
             Debug.Log("Touched fly");
             flyCount++;
+
+            
 
             if (flyCount >= 5)
             {
@@ -56,7 +64,7 @@ public class SizeManager : MonoBehaviour {
             }
             else ChangeSize();
 
-            Destroy(collision.gameObject); // this could be changed to do something else
+            Destroy(collision.gameObject);
         }
     }
 

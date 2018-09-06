@@ -21,11 +21,9 @@ GameObject:
   - component: {fileID: 4492857816291366}
   - component: {fileID: 114398289265071264}
   - component: {fileID: 114234924701387378}
-  - component: {fileID: 114880254462942844}
   - component: {fileID: 114209081032260828}
   - component: {fileID: 114772245539288804}
-  - component: {fileID: 82639814481304726}
-  - component: {fileID: 82817475626476982}
+  - component: {fileID: 82140561524161182}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -46,7 +44,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82639814481304726
+--- !u!82 &82140561524161182
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,106 +53,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 45fd2f6c34c774a48874a178868f7b41, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!82 &82817475626476982
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1651369069499242}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -256,6 +159,8 @@ MonoBehaviour:
   pauseMenuActive: 0
   crownHolderRed: {fileID: 0}
   crownHolderBlue: {fileID: 0}
+  exit: 27
+  keepPlaying: 32
 --- !u!114 &114234924701387378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -275,7 +180,7 @@ MonoBehaviour:
   rightFlies:
   - {fileID: 1363665975822722, guid: da0c616a64233e44295f21ebb9f576ea, type: 2}
   - {fileID: 1579079752278746, guid: 89e11a69d10df9146b8b324f3f92a3b3, type: 2}
-  spawning: 0
+  spawning: 1
 --- !u!114 &114398289265071264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -301,14 +206,3 @@ MonoBehaviour:
   wowSprite: {fileID: 0}
   isSprite: 0
   waitTime: 0
---- !u!114 &114880254462942844
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1651369069499242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c28980cf564b0d24baf6f1c140daebe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

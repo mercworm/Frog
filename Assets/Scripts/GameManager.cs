@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour {
 
     public KeyCode exit, keepPlaying;
 
+    public AudioSource flySource;
+
     private void Update()
     {
         //if a player presses esc, bring up pause menu.
@@ -84,6 +86,7 @@ public class GameManager : MonoBehaviour {
             winScreen.transform.GetChild(0).gameObject.SetActive(true);
             winMenuActive = true;
             EventManager.TriggerEvent("Win");
+            flySource.enabled = flySource;
             return;
         }
         else
@@ -115,6 +118,7 @@ public class GameManager : MonoBehaviour {
             winScreen.SetActive(true);
             winMenuActive = true;
             EventManager.TriggerEvent("Win");
+            flySource.enabled = false;
             return;
         }
         else

@@ -54,5 +54,6 @@ public class WowEffects : MonoBehaviour {
         //here goes all the things that we want to show between rounds.
         wowSprite.SetActive(true);
         yield return new WaitForEndOfFrame();
+        EventManager.TriggerEvent("StartRound");
     }
 }
