@@ -9,11 +9,13 @@ public class FlyMovement : MonoBehaviour {
     private Rigidbody2D rb2d;
 
     public bool left = false;
+    public bool IsEaten = false;
 
     private void OnEnable()
     {
         EventManager.StartListening("RoundComplete", SelfDestruct);
     }
+
 
     // Use this for initialization
     void Start () {
