@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode tongue;
 
     public float jumpForce;
-    public float jumpForceStart;
+    private float jumpForceStart;
     public float lickWait;
 
     public float forceIncrease;
@@ -53,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         frogAnim = GetComponent<Animator>();
+
+        jumpForceStart = jumpForce;
 
         //Save startpos, so the game can be reset without restarting the scene.
         startPos = transform.position;
