@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         EventManager.StartListening("IncreaseJumpForce", ForceIncrease);
         EventManager.StartListening("RoundComplete", Resetting);
         EventManager.StartListening("PlayersMovementToggleOn", MovementToggleOn);
+        EventManager.StartListening("PlayersMovementToggleOff", MovementToggleOff);
     }
 
     private void OnDisable()
@@ -44,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
         EventManager.StopListening("IncreaseJumpForce", ForceIncrease);
         EventManager.StopListening("RoundComplete", Resetting);
         EventManager.StopListening("PlayersMovementToggleOn", MovementToggleOn);
+        EventManager.StopListening("PlayersMovementToggleOff", MovementToggleOff);
     }
 
     //Get animator and rigidbody.

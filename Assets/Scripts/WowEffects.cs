@@ -44,6 +44,7 @@ public class WowEffects : MonoBehaviour {
 
     public void Win ()
     {
+        Debug.Log("Someone won!!");
         //whatever we might want to show with the winscreen, if we're not already doing that
         EventManager.TriggerEvent("PlayersMovementToggleOff");
     }

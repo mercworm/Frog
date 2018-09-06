@@ -112,10 +112,13 @@ public class GameManager : MonoBehaviour {
             winScreen.transform.GetChild(1).gameObject.SetActive(true);
             winScreen.SetActive(true);
             winMenuActive = true;
+            EventManager.TriggerEvent("Win");
+            return;
         }
         else
         {
             EventManager.TriggerEvent("RoundComplete");
+            Debug.Log("RoundComplete!");
         }
     }
 }
