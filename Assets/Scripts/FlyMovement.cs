@@ -10,8 +10,13 @@ public class FlyMovement : MonoBehaviour {
 
     public bool left = false;
 
-	// Use this for initialization
-	void Start () {
+    private void OnEnable()
+    {
+        EventManager.StartListening("RoundComplete", SelfDestruct);
+    }
+
+    // Use this for initialization
+    void Start () {
         rb2d = GetComponent<Rigidbody2D>();
 	}
 	
@@ -27,5 +32,10 @@ public class FlyMovement : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+    }
+
+    public void SelfDestruct ()
+    {
+        Destroy(gameObject);
     }
 }

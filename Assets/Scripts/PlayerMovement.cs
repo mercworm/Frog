@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode tongue;
 
     public float jumpForce;
-    public float jumpForceStart;
+    private float jumpForceStart;
     public float lickWait;
 
     public float forceIncrease;
@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         EventManager.StartListening("IncreaseJumpForce", ForceIncrease);
         EventManager.StartListening("RoundComplete", Resetting);
         EventManager.StartListening("PlayersMovementToggleOn", MovementToggleOn);
+        EventManager.StartListening("PlayersMovementToggleOff", MovementToggleOff);
     }
 
     private void OnDisable()
@@ -44,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
         EventManager.StopListening("IncreaseJumpForce", ForceIncrease);
         EventManager.StopListening("RoundComplete", Resetting);
         EventManager.StopListening("PlayersMovementToggleOn", MovementToggleOn);
+        EventManager.StopListening("PlayersMovementToggleOff", MovementToggleOff);
     }
 
     //Get animator and rigidbody.
@@ -51,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         frogAnim = GetComponent<Animator>();
+
+        jumpForceStart = jumpForce;
 
         //Save startpos, so the game can be reset without restarting the scene.
         startPos = transform.position;
