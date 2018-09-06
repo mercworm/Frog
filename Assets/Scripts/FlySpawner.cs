@@ -17,6 +17,8 @@ public class FlySpawner : MonoBehaviour {
     private void OnEnable()
     {
         EventManager.StartListening("Win", StopSpawning);
+        EventManager.StartListening("RoundComplete", StopSpawning);
+        EventManager.StartListening("StartRound", StartSpawning);
     }
 
     void Start ()
@@ -35,9 +37,9 @@ public class FlySpawner : MonoBehaviour {
             Vector3 spawn = new Vector3(spawnPointX, spawnPointY, 0);
 
             Instantiate(rightFlies[Random.Range(0,2)], spawn, Quaternion.identity);
-
-            Invoke("SpawnFlyRight", Random.Range(minTime, maxTime));
         }
+
+        Invoke("SpawnFlyRight", Random.Range(minTime, maxTime));
     }
 
     public void SpawnFlyLeft ()
@@ -49,13 +51,18 @@ public class FlySpawner : MonoBehaviour {
             Vector3 spawn = new Vector3(spawnPointX, spawnPointY, 0);
 
             Instantiate(leftFlies[Random.Range(0,2)], spawn, Quaternion.identity);
-
-            Invoke("SpawnFlyLeft", Random.Range(minTime, maxTime));
         }
+
+        Invoke("SpawnFlyLeft", Random.Range(minTime, maxTime));
     }
 
     public void StopSpawning ()
     {
         spawning = false;
+    }
+
+    public void StartSpawning ()
+    {
+        spawning = true;
     }
 }
