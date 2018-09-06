@@ -214,9 +214,35 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114651511753348000, guid: 3fb9bc4d321e0b04ab80e09cdcded277,
+        type: 2}
+      propertyPath: m_Text
+      value: 'U sure u wanna quit?
+
+
+        Press Space to continue playing.'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fb9bc4d321e0b04ab80e09cdcded277, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &83015824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1259854827207102, guid: b5168121ea335a442b8a3178f396c9ec,
+    type: 2}
+  m_PrefabInternal: {fileID: 787192177}
+--- !u!114 &83015833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 83015824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd98a664c8d2cc4ab26cabae63bd295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfRigtingTol: 0.5
+  torque: 1
 --- !u!1001 &83347994
 Prefab:
   m_ObjectHideFlags: 0
@@ -1990,6 +2016,24 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1685718267}
   m_Script: {fileID: 11500000, guid: 0a75920897bb48f4c82caf5609fcc029, type: 3}
+--- !u!1 &1994486543 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1396761408407580, guid: 76781ff9443c8b242a8114c9aba5c523,
+    type: 2}
+  m_PrefabInternal: {fileID: 790250332}
+--- !u!114 &1994486549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994486543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd98a664c8d2cc4ab26cabae63bd295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfRigtingTol: 0.5
+  torque: 1
 --- !u!1001 &2067765917
 Prefab:
   m_ObjectHideFlags: 0
