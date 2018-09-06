@@ -519,9 +519,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditsScreen: {fileID: 901300022}
-  startGame: 0
-  endGame: 0
-  credits: 0
+  startGame: 32
+  endGame: 27
+  credits: 9
 --- !u!4 &560926752
 Transform:
   m_ObjectHideFlags: 0
