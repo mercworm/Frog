@@ -9,6 +9,9 @@ public class WowEffects : MonoBehaviour {
 
     public float waitTime;
 
+    public AudioSource effectSource;
+    public AudioClip wow;
+
     private void OnEnable()
     {
         if (isSprite) return;
@@ -53,6 +56,8 @@ public class WowEffects : MonoBehaviour {
     {
         //here goes all the things that we want to show between rounds.
         wowSprite.SetActive(true);
+        effectSource.clip = wow;
+        effectSource.Play();
         yield return new WaitForEndOfFrame();
         EventManager.TriggerEvent("StartRound");
     }
