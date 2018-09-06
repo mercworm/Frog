@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioClip jumpSound, lickSound;
 
-    public CircleCollider2D tongueCollider;
+    public Collider2D[] tongueCollider;
 
     //All the events this script listens to.
     private void OnEnable()
@@ -121,8 +121,16 @@ public class PlayerMovement : MonoBehaviour
 
     public void TongueColliderToggle()
     {
-        if (tongueCollider.enabled) tongueCollider.enabled = false;
-        else tongueCollider.enabled = true;
+        if (tongueCollider[0].enabled)
+        {
+            tongueCollider[0].enabled = false;
+            tongueCollider[1].enabled = false;
+        }
+        else
+        {
+            tongueCollider[0].enabled = true;
+            tongueCollider[1].enabled = true;
+        }
     }
 
     public void MovementToggleOn ()

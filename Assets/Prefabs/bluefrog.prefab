@@ -110,6 +110,8 @@ GameObject:
   - component: {fileID: 114802698033501010}
   - component: {fileID: 82018522891805358}
   - component: {fileID: 58761199688233502}
+  - component: {fileID: 50240605168108558}
+  - component: {fileID: 60131424147797768}
   m_Layer: 0
   m_Name: bluefrog_tongue
   m_TagString: PlayerOne
@@ -354,6 +356,26 @@ Transform:
   m_Father: {fileID: 4038739173959512}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50240605168108558
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529505475776784}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!50 &50242826700960800
 Rigidbody2D:
   serializedVersion: 4
@@ -389,6 +411,40 @@ CircleCollider2D:
   m_Offset: {x: -9.43144, y: -0.6639763}
   serializedVersion: 2
   m_Radius: 0.43158415
+--- !u!60 &60131424147797768
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1529505475776784}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 21, y: 15}
+    newSize: {x: 21, y: 15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -8.961914, y: -0.82543945}
+      - {x: -8.151855, y: -0.7434082}
+      - {x: -7.8237305, y: -0.7126465}
+      - {x: -7.0751953, y: -0.32299805}
+      - {x: -7.5981445, y: -0.34350586}
+      - {x: -8.428711, y: -0.37426758}
+      - {x: -8.777344, y: -0.3947754}
+      - {x: -8.961914, y: -0.4152832}
+      - {x: -9.064453, y: -0.43579102}
+      - {x: -9.0234375, y: -0.84594727}
 --- !u!60 &60741816155949594
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -723,7 +779,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 8c3bd9db28f8a464087ece2312101d72, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -756,7 +812,9 @@ MonoBehaviour:
   canMove: 0
   jumpSound: {fileID: 0}
   lickSound: {fileID: 0}
-  tongueCollider: {fileID: 58761199688233502}
+  tongueCollider:
+  - {fileID: 58761199688233502}
+  - {fileID: 60131424147797768}
 --- !u!114 &114802698033501010
 MonoBehaviour:
   m_ObjectHideFlags: 1

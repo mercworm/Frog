@@ -174,6 +174,9 @@ GameObject:
   - component: {fileID: 114701945063527188}
   - component: {fileID: 82686258876163912}
   - component: {fileID: 58255536698836696}
+  - component: {fileID: 50115881645740018}
+  - component: {fileID: 82915667524726842}
+  - component: {fileID: 60510100690817146}
   m_Layer: 0
   m_Name: redfrog_tongue
   m_TagString: PlayerTwo
@@ -352,6 +355,26 @@ Transform:
   m_Father: {fileID: 4834308874164804}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50115881645740018
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683605114310308}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!50 &50479326482099524
 Rigidbody2D:
   serializedVersion: 4
@@ -519,7 +542,151 @@ PolygonCollider2D:
       - {x: 3.8862305, y: 0.7741699}
       - {x: 3.8452148, y: 0.7741699}
       - {x: 3.619629, y: 0.763916}
+--- !u!60 &60510100690817146
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683605114310308}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 21, y: 15}
+    newSize: {x: 21, y: 15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 9.618164, y: -0.80493164}
+      - {x: 9.638672, y: -0.7229004}
+      - {x: 9.638672, y: -0.67163086}
+      - {x: 9.618164, y: -0.5383301}
+      - {x: 9.556641, y: -0.44604492}
+      - {x: 9.495117, y: -0.37426758}
+      - {x: 9.290039, y: -0.29223633}
+      - {x: 9.064453, y: -0.29223633}
+      - {x: 8.961914, y: -0.32299805}
+      - {x: 8.808105, y: -0.43579102}
+      - {x: 8.664551, y: -0.4152832}
+      - {x: 8.397949, y: -0.3947754}
+      - {x: 8.213379, y: -0.38452148}
+      - {x: 7.659668, y: -0.36401367}
+      - {x: 6.8598633, y: -0.33325195}
+      - {x: 7.5058594, y: -0.7126465}
+      - {x: 8.356934, y: -0.79467773}
+      - {x: 8.736328, y: -0.84594727}
+      - {x: 8.828613, y: -0.95874023}
+      - {x: 8.900391, y: -1.0407715}
+      - {x: 8.982422, y: -1.0817871}
+      - {x: 9.177246, y: -1.0817871}
+      - {x: 9.331055, y: -1.0612793}
+      - {x: 9.433594, y: -1.0202637}
+      - {x: 9.587402, y: -0.8869629}
 --- !u!82 &82686258876163912
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683605114310308}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &82915667524726842
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -625,7 +792,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 08d47423277a5434bae2bba4c1d03eae, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -658,7 +825,9 @@ MonoBehaviour:
   canMove: 0
   jumpSound: {fileID: 0}
   lickSound: {fileID: 0}
-  tongueCollider: {fileID: 58255536698836696}
+  tongueCollider:
+  - {fileID: 58255536698836696}
+  - {fileID: 60510100690817146}
 --- !u!114 &114701945063527188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -684,7 +853,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 640e53cc7410de249a7a240b0df8704d, type: 3}
   - {fileID: 8300000, guid: a21ba118b4fe9d34a9e7173943f4d57d, type: 3}
   - {fileID: 8300000, guid: 3d9dc9b87f44907488f479dec22cbe67, type: 3}
-  growthSource: {fileID: 82686258876163912}
+  growthSource: {fileID: 82915667524726842}
   crownHolder: {fileID: 1416681750055418}
   frogBody: {fileID: 212168692212910118}
   massIncrease: 0.3
