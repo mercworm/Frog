@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour {
 
     public AudioSource flySource;
 
+    public float crownSpawnTime;
+
     private void Update()
     {
         //if a player presses esc, bring up pause menu.
@@ -70,16 +72,6 @@ public class GameManager : MonoBehaviour {
     {
         playerOneScore++;
 
-        for (int i = 0; i < crownHolderBlue.transform.childCount; i++)
-        {
-            var child = crownHolderBlue.transform.GetChild(i).gameObject;
-            if (!child.activeInHierarchy)
-            {
-                child.SetActive(true);
-                break;
-            }
-        }
-
         if (playerOneScore == winScore)
         {
             winScreen.SetActive(true);
@@ -93,6 +85,21 @@ public class GameManager : MonoBehaviour {
         {
             EventManager.TriggerEvent("RoundComplete");
             Debug.Log("RoundComplete!");
+            StartCoroutine(AddCrownBlue());
+        }
+    }
+
+    public IEnumerator AddCrownBlue ()
+    {
+        yield return new WaitForSeconds(crownSpawnTime);
+        for (int i = 0; i < crownHolderBlue.transform.childCount; i++)
+        {
+            var child = crownHolderBlue.transform.GetChild(i).gameObject;
+            if (!child.activeInHierarchy)
+            {
+                child.SetActive(true);
+                break;
+            }
         }
     }
 
@@ -101,16 +108,6 @@ public class GameManager : MonoBehaviour {
     public void PlayerTwoWin ()
     {
         playerTwoScore++;
-
-        for (int i = 0; i < crownHolderRed.transform.childCount; i++)
-        {
-            var child = crownHolderRed.transform.GetChild(i).gameObject;
-            if (!child.activeInHierarchy)
-            {
-                child.SetActive(true);
-                break;
-            }
-        }
 
         if (playerTwoScore == winScore)
         {
@@ -125,6 +122,21 @@ public class GameManager : MonoBehaviour {
         {
             EventManager.TriggerEvent("RoundComplete");
             Debug.Log("RoundComplete!");
+            StartCoroutine(AddCrownRed());
+        }
+    }
+
+    public IEnumerator AddCrownRed()
+    {
+        yield return new WaitForSeconds(crownSpawnTime);
+        for (int i = 0; i < crownHolderRed.transform.childCount; i++)
+        {
+            var child = crownHolderRed.transform.GetChild(i).gameObject;
+            if (!child.activeInHierarchy)
+            {
+                child.SetActive(true);
+                break;
+            }
         }
     }
 }

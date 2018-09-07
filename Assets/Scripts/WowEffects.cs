@@ -10,7 +10,7 @@ public class WowEffects : MonoBehaviour {
     public float waitTime;
 
     public AudioSource effectSource;
-    public AudioClip wow;
+    public AudioClip wow, victory;
 
     private void OnEnable()
     {
@@ -45,6 +45,8 @@ public class WowEffects : MonoBehaviour {
         Debug.Log("Someone won!!");
         //whatever we might want to show with the winscreen, if we're not already doing that
         EventManager.TriggerEvent("PlayersMovementToggleOff");
+        effectSource.clip = victory;
+        effectSource.Play();
     }
 
     public void RoundComplete()
