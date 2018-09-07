@@ -192,7 +192,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Time: 0.7
   m_Parameters:
     serializedVersion: 2
@@ -271,6 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   left: 1
+  IsEaten: 0
 --- !u!212 &212586905698760390
 SpriteRenderer:
   m_ObjectHideFlags: 1
