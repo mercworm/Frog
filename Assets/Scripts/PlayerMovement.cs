@@ -31,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
 
     public Collider2D[] tongueCollider;
 
+    public Sprite regularButton, flashButton;
+    public SpriteRenderer moveKeys;
+
     //All the events this script listens to.
     private void OnEnable()
     {
@@ -106,13 +109,16 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
-            AudioSource.PlayClipAtPoint(jumpSound, transform.position);
+            moveKeys.sprite = flashButton;
+            moveKeys.sprite = regularButton;
+
         }
     }
     //Check when the frog leaves the ground.
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground")) isGrounded = false;
+        AudioSource.PlayClipAtPoint(jumpSound, transform.position);
     }
 
     //Increase the jump-force when the size and mass of the frog has increased.
