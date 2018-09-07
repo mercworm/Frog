@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 60741816155949594}
   - component: {fileID: 233476618778402614}
   - component: {fileID: 82817695920186042}
+  - component: {fileID: 114950236482882988}
   m_Layer: 0
   m_Name: bluefrog
   m_TagString: PlayerOne
@@ -683,7 +684,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -809,8 +810,9 @@ MonoBehaviour:
   jumpAnimName: JumpBlue
   tongueAnimName: LickBlue
   canMove: 0
-  jumpSound: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: da170cbc3b2019a44b3a8f1ea2a4acf1, type: 3}
   lickSound: {fileID: 0}
+  landSound: {fileID: 8300000, guid: 08bfe24a5c525d5448fc1cb2b37c217c, type: 3}
   tongueCollider:
   - {fileID: 58761199688233502}
   - {fileID: 60131424147797768}
@@ -829,7 +831,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a4fd0d33b49481c479635a15f30f0933, type: 3}
   - {fileID: 21300000, guid: 41688b882d61abb43ab516bd3a7a5e45, type: 3}
   - {fileID: 21300000, guid: 265cd6a93cea8234fb4cc8089d7a3178, type: 3}
-  - {fileID: 21300000, guid: fbac83b6f3f31804e90b8e90fb51b336, type: 3}
+  - {fileID: 21300000, guid: 60311cbbc925c2d418c25383b0147016, type: 3}
   - {fileID: 21300000, guid: 5bdc0a0e4428ef84f9c3057d4f290913, type: 3}
   flyCount: 0
   currentSize: 0
@@ -844,6 +846,19 @@ MonoBehaviour:
   frogBody: {fileID: 212132193710666366}
   massIncrease: 0.3
   splatFly: {fileID: 1613873036715806}
+--- !u!114 &114950236482882988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259854827207102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd98a664c8d2cc4ab26cabae63bd295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfRigtingTol: 0.5
+  torque: 1
 --- !u!198 &198010920727916088
 ParticleSystem:
   m_ObjectHideFlags: 1
