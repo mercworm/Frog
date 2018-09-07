@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 50479326482099524}
   - component: {fileID: 114158282237263800}
   - component: {fileID: 60366533003872102}
+  - component: {fileID: 114847542974877344}
   m_Layer: 0
   m_Name: redfrog
   m_TagString: PlayerTwo
@@ -177,6 +178,7 @@ GameObject:
   - component: {fileID: 50115881645740018}
   - component: {fileID: 82915667524726842}
   - component: {fileID: 60510100690817146}
+  - component: {fileID: 82156736067822176}
   m_Layer: 0
   m_Name: redfrog_tongue
   m_TagString: PlayerTwo
@@ -317,7 +319,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1396761408407580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.04, y: -3.22, z: 0}
+  m_LocalPosition: {x: 0.25, y: -2.97, z: 0}
   m_LocalScale: {x: 0.62343, y: 0.62343, z: 0.62343}
   m_Children:
   - {fileID: 4486381710649722}
@@ -391,7 +393,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -591,6 +593,101 @@ PolygonCollider2D:
       - {x: 9.331055, y: -1.0612793}
       - {x: 9.433594, y: -1.0202637}
       - {x: 9.587402, y: -0.8869629}
+--- !u!82 &82156736067822176
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683605114310308}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!82 &82686258876163912
 AudioSource:
   m_ObjectHideFlags: 1
@@ -822,11 +919,15 @@ MonoBehaviour:
   jumpAnimName: JumpRed
   tongueAnimName: LickRed
   canMove: 0
-  jumpSound: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: da170cbc3b2019a44b3a8f1ea2a4acf1, type: 3}
   lickSound: {fileID: 0}
+  landSound: {fileID: 8300000, guid: 08bfe24a5c525d5448fc1cb2b37c217c, type: 3}
   tongueCollider:
   - {fileID: 58255536698836696}
   - {fileID: 60510100690817146}
+  regularButton: {fileID: 21300000, guid: e7813185f8254a8419d7022894978033, type: 3}
+  flashButton: {fileID: 21300000, guid: 08f269051a676ce4f89600045d9c2cc5, type: 3}
+  moveKeys: {fileID: 0}
 --- !u!114 &114701945063527188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -852,11 +953,24 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 640e53cc7410de249a7a240b0df8704d, type: 3}
   - {fileID: 8300000, guid: a21ba118b4fe9d34a9e7173943f4d57d, type: 3}
   - {fileID: 8300000, guid: 3d9dc9b87f44907488f479dec22cbe67, type: 3}
-  growthSource: {fileID: 82915667524726842}
+  growthSource: {fileID: 82156736067822176}
   crownHolder: {fileID: 1416681750055418}
   frogBody: {fileID: 212168692212910118}
   massIncrease: 0.3
   splatFly: {fileID: 1058839883757734}
+--- !u!114 &114847542974877344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1396761408407580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd98a664c8d2cc4ab26cabae63bd295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfRigtingTol: 0.5
+  torque: 50
 --- !u!198 &198490850061653930
 ParticleSystem:
   m_ObjectHideFlags: 1
