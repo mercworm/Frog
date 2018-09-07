@@ -18,7 +18,7 @@ public class PlayerStraightening : MonoBehaviour {
     {
         if (Vector2.Dot(transform.up, Vector2.up) < selfRigtingTol)
         {
-            rb2d.AddTorque(torque * transform.up.x);
+            rb2d.AddTorque(torque * Mathf.Sign( transform.up.x));
         }
 	}
 }
