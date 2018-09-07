@@ -559,6 +559,7 @@ MonoBehaviour:
   waitTime: 0
   effectSource: {fileID: 0}
   wow: {fileID: 0}
+  victory: {fileID: 0}
 --- !u!1 &472110350
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,11 +783,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4038739173959512, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.1422139
+      value: 0.24587964
       objectReference: {fileID: 0}
     - target: {fileID: 4038739173959512, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.1804726
+      value: -2.98
       objectReference: {fileID: 0}
     - target: {fileID: 4038739173959512, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
       propertyPath: m_LocalPosition.z
@@ -817,6 +818,45 @@ Prefab:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 1486585643}
+    - target: {fileID: 4038739173959512, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950236482882988, guid: b5168121ea335a442b8a3178f396c9ec,
+        type: 2}
+      propertyPath: torque
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950236482882988, guid: b5168121ea335a442b8a3178f396c9ec,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 233476618778402614, guid: b5168121ea335a442b8a3178f396c9ec,
+        type: 2}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.4302449
+      objectReference: {fileID: 0}
+    - target: {fileID: 233476618778402614, guid: b5168121ea335a442b8a3178f396c9ec,
+        type: 2}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.30389103
+      objectReference: {fileID: 0}
+    - target: {fileID: 233476618778402614, guid: b5168121ea335a442b8a3178f396c9ec,
+        type: 2}
+      propertyPath: m_UseMotor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 233476618778402614, guid: b5168121ea335a442b8a3178f396c9ec,
+        type: 2}
+      propertyPath: m_Motor.m_MotorSpeed
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50242826700960800, guid: b5168121ea335a442b8a3178f396c9ec,
+        type: 2}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5168121ea335a442b8a3178f396c9ec, type: 2}
   m_IsPrefabAsset: 0
@@ -834,11 +874,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4834308874164804, guid: 76781ff9443c8b242a8114c9aba5c523, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.04
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4834308874164804, guid: 76781ff9443c8b242a8114c9aba5c523, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.22
+      value: -2.97
       objectReference: {fileID: 0}
     - target: {fileID: 4834308874164804, guid: 76781ff9443c8b242a8114c9aba5c523, type: 2}
       propertyPath: m_LocalPosition.z
@@ -904,6 +944,15 @@ Prefab:
       propertyPath: landSound
       value: 
       objectReference: {fileID: 8300000, guid: 08bfe24a5c525d5448fc1cb2b37c217c, type: 3}
+    - target: {fileID: 4834308874164804, guid: 76781ff9443c8b242a8114c9aba5c523, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50479326482099524, guid: 76781ff9443c8b242a8114c9aba5c523,
+        type: 2}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76781ff9443c8b242a8114c9aba5c523, type: 2}
   m_IsPrefabAsset: 0
@@ -1301,7 +1350,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -6.5}
+  m_Offset: {x: 0.51988363, y: -8.522753}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1312,7 +1361,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 24.439999, y: 1.6794181}
+  m_Size: {x: 30.08767, y: 5.724924}
   m_EdgeRadius: 0
 --- !u!1 &1408749266
 GameObject:
@@ -1741,7 +1790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfRigtingTol: 0.5
-  torque: 1
+  torque: 50
 --- !u!1 &2094492244
 GameObject:
   m_ObjectHideFlags: 0
