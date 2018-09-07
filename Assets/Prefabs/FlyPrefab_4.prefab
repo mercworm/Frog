@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 58425900861032902}
   - component: {fileID: 114837040493614094}
   - component: {fileID: 96480864612673794}
+  - component: {fileID: 95443425858988604}
   m_Layer: 0
   m_Name: FlyPrefab_4
   m_TagString: Fly
@@ -138,6 +139,24 @@ CircleCollider2D:
   m_Offset: {x: -0.0111275315, y: 0}
   serializedVersion: 2
   m_Radius: 0.74109715
+--- !u!95 &95443425858988604
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1579079752278746}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 092b8cdaad9b9b34a9786ca72657198c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!96 &96480864612673794
 TrailRenderer:
   serializedVersion: 2
@@ -146,7 +165,7 @@ TrailRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1579079752278746}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 0
   m_MotionVectors: 1
